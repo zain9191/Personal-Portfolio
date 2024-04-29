@@ -1,0 +1,25 @@
+@import '../assets/variables';
+
+.headerDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__logoS{
+        height: 60px;
+        width: 80px;
+        
+    }
+
+
+&__ul{
+    width: 60%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &>li{
+        color: $color-Pri;
+    }
+}
+}

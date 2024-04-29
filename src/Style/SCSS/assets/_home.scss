@@ -1,0 +1,23 @@
+.Home{
+    position: relative;
+
+    &__BG{
+        opacity: 0.1;
+        width: 100%;
+        filter: grayscale(100%);
+        position: absolute;
+
+
+        }
+
+    &__img{
+        width:250px;
+        height: auto;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

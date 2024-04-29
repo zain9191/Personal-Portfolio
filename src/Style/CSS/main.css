@@ -1,0 +1,40 @@
+.headerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.headerDiv__logoS {
+  height: 60px;
+  width: 80px;
+}
+.headerDiv__ul {
+  width: 60%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.headerDiv__ul > li {
+  color: #F6F4F2;
+}
+
+.Home {
+  position: relative;
+}
+.Home__BG {
+  opacity: 0.1;
+  width: 100%;
+  filter: grayscale(100%);
+  position: absolute;
+}
+.Home__img {
+  width: 250px;
+  height: auto;
+}
+.Home__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=main.css.map */
