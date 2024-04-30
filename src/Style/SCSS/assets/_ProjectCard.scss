@@ -10,6 +10,8 @@
         // align-items: center;
         background-color: $color-Pri;
         border-radius: 20px;
+        margin: 30px;
+        height: 100vh;
         &__h3{
             text-align: center;
             color:#FF6060;
@@ -31,13 +33,20 @@
     }
     &__img{
         border-radius: 45px;
-        width: 90%;
+        width: 100%;
+        height: auto;
+        max-width: 800px;
+        margin-right: auto;
+        // margin-left: 0;
+
+        
 
     }
     &__details{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        width: 30%;
     }
     &__link{
         cursor: alias;
@@ -54,9 +63,11 @@
         align-items: center;
 
         &--logos{
+            width: 80%;
+            max-width: fit-content;
             display: flex;
             flex-direction: row;
-            // border: dotted red 3px;
+            justify-content: space-around;
         }
     }
     }

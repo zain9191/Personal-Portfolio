@@ -107,6 +107,8 @@ a {
   justify-content: center;
   background-color: #F6F4F2;
   border-radius: 20px;
+  margin: 30px;
+  height: 100vh;
 }
 .project-a__card__h3 {
   text-align: center;
@@ -124,12 +126,16 @@ a {
 }
 .project-a__img {
   border-radius: 45px;
-  width: 90%;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin-right: auto;
 }
 .project-a__details {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 30%;
 }
 .project-a__link {
   cursor: alias;
@@ -145,8 +151,11 @@ a {
   align-items: center;
 }
 .project-a__tools--logos {
+  width: 80%;
+  max-width: fit-content;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .tool-logo {

@@ -12,13 +12,13 @@ const About = () => {
     imageUrl: KasaHome,
     link: "https://github.com/zain9191/P7-Kasa",
     tools: ["JavaScript", "CSS", "HTML", "React", "Node"],
-    // tools: ["JavaScript"],
   };
   const LaMaisonJungle = {
-    title: "Piquante",
+    title: "HotTakes",
     description: "Une application d'avis gastronomiques",
     imageUrl: P6Home,
     link: "https://github.com/zain9191/Web-Developer-P6",
+    tools: ["TypeScript", "CSS", "HTML", "Angular", "Node"],
   };
   const Kanap = {
     title: "Kanap",
@@ -49,15 +49,16 @@ const About = () => {
                 tools={Kasa.tools}
               />
             </div>{" "}
-            {/* <div className="projects">
+            <div className="projects">
               <ProjectCard
                 title={LaMaisonJungle.title}
                 description={LaMaisonJungle.description}
                 imageUrl={LaMaisonJungle.imageUrl}
                 link={LaMaisonJungle.link}
+                tools={LaMaisonJungle.tools}
               />
             </div>{" "}
-            <div className="projects">
+            {/* <div className="projects">
               <ProjectCard
                 title={Kanap.title}
                 description={Kanap.description}
