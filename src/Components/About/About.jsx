@@ -1,5 +1,6 @@
 import React from "react";
-import ProjectCard from "../Card/card";
+import ProjectCard from "../ProjectCard/ProjectCard";
+import SubTitle from "../subTitle/subTitle";
 import KasaHome from "../../assets/Kasa-home.png";
 import P6Home from "../../assets/P6Home.png";
 import P5Home from "../../assets/KanapHome.png";
@@ -10,6 +11,8 @@ const About = () => {
     description: "Application React pour trouver une maison de vacances",
     imageUrl: KasaHome,
     link: "https://github.com/zain9191/P7-Kasa",
+    tools: ["JavaScript", "CSS", "HTML", "React", "Node"],
+    // tools: ["JavaScript"],
   };
   const LaMaisonJungle = {
     title: "Piquante",
@@ -28,7 +31,7 @@ const About = () => {
     <section id="about">
       <div className="container">
         <div className="about-content">
-          <h2 className="about-content__h2">Get to Know</h2>
+          <SubTitle />
           <p className="about-text__1p ">
             A dedicated frontend developer. <br />
             Specialize in creating modern, responsive web applications using
@@ -36,13 +39,14 @@ const About = () => {
           </p>
           <br />
           <p>take a look at what i have created</p>
-          <div className="about-text">
+          <div className="about__grid">
             <div className="projects">
               <ProjectCard
                 title={Kasa.title}
                 description={Kasa.description}
                 imageUrl={Kasa.imageUrl}
                 link={Kasa.link}
+                tools={Kasa.tools}
               />
             </div>{" "}
             {/* <div className="projects">

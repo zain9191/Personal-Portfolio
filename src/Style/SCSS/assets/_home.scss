@@ -1,8 +1,9 @@
 .Home{
     width: 100%;
     position: relative;
-    height: 100vh;
-
+    // height: 100vh;
+    height: fit-content;
+    // border: dotted red 3px;
     &__BG{
         opacity: 0.03;
 

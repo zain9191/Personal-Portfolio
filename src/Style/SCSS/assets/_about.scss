@@ -1,34 +1,11 @@
 
 
 .about-content{
+    height: 100vh;
+    top: 0;
+    right: 0;
 
-    &__h2{
-        padding-left: 15px;
-        background-color: $color-the;
-        border-radius: 10px;
-        // width: 100%;
-    }
 
 }
 
-
-.about-text{
-    display: flex;
-    flex-wrap: wrap;
-    // justify-content: space-around;
-
-    border: dotted red 3px;
-
-    &__1p{
-        padding-left: 15px;
-        max-width: 600px;
-        background-color: $color-Pri;
-        padding: 10px;
-        border-radius: 20px;
-
-        font-size: 20px;
-
-
-    }
-}
 
