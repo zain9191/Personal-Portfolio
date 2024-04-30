@@ -6,8 +6,8 @@
     justify-content: space-between;
 
     &__logoS{
-        height: 60px;
-        width: 80px;
+        height: 90px;
+        // width: 80px;
         
     }
 
@@ -18,8 +18,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    &>li{
-        color: $color-Pri;
+    text-decoration: none;
+
+    &__a{
+        // border: dotted red 3px;
+        color: $color-the;
+        text-decoration: none;
+        font-size: x-large;
+
+
     }
 }
 }
+

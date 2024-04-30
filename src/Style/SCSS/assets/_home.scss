@@ -1,23 +1,50 @@
 .Home{
     position: relative;
+    height: fit-content;
 
     &__BG{
-        opacity: 0.1;
-        width: 100%;
-        filter: grayscale(100%);
+        opacity: 0.03;
+
+        filter: sepia(100%);
+
         position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        max-height: 100%; 
 
 
         }
 
     &__img{
-        width:250px;
-        height: auto;
+        filter: sepia(30%);
+        border-radius: 10px;
+
     }
 
     &__container{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+    &__h1{
+        font-size: 250px;
+        font-weight: 800;
+        font-family: 'Signika Negative';
+        margin-bottom: 15px;
+        &__dot{
+            color: $color-the;
+        }
+
+    }
+    &__h2{
+        
+    }
+
+    &__line{
+        height: 1px;
+        width: 70%;
+        background-color: black;
+        // color: black;
     }
 }

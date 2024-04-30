@@ -1,0 +1,21 @@
+@import '../assets/variables';
+
+.project-link{
+    // height: 500px;
+    // width: 50px;
+    // background-color: red;
+    // border: dotted red 3px;
+    &__card{
+        
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    &__img{
+        object-fit: cover;
+        border-radius: 25px;
+
+        
+    }
+}
