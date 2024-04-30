@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCard from "../Card/card";
 import KasaHome from "../../assets/Kasa-home.png";
+import P6Home from "../../assets/P6Home.png";
+import P5Home from "../../assets/KanapHome.png";
 
 const About = () => {
   const Kasa = {
@@ -9,19 +11,32 @@ const About = () => {
     imageUrl: KasaHome,
     link: "https://github.com/zain9191/P7-Kasa",
   };
+  const LaMaisonJungle = {
+    title: "Piquante",
+    description: "Une application d'avis gastronomiques",
+    imageUrl: P6Home,
+    link: "https://github.com/zain9191/Web-Developer-P6",
+  };
+  const Kanap = {
+    title: "Kanap",
+    description: "Un site web qui vendre des Kanaps",
+    imageUrl: P5Home,
+    link: "https://github.com/zain9191/P5-Dev-Web-Kanap",
+  };
 
   return (
     <section id="about">
       <div className="container">
         <div className="about-content">
           <h2 className="about-content__h2">Get to Know</h2>
-
+          <p className="about-text__1p ">
+            A dedicated frontend developer. <br />
+            Specialize in creating modern, responsive web applications using
+            React.js.
+          </p>
+          <br />
+          <p>take a look at what i have created</p>
           <div className="about-text">
-            <p className="about-text__1p">
-              Hi there! I'm Zain Frayha, a dedicated frontend developer. I
-              specialize in creating modern, responsive web applications using
-              React.js.
-            </p>
             <div className="projects">
               <ProjectCard
                 title={Kasa.title}
@@ -29,7 +44,23 @@ const About = () => {
                 imageUrl={Kasa.imageUrl}
                 link={Kasa.link}
               />
-            </div>
+            </div>{" "}
+            {/* <div className="projects">
+              <ProjectCard
+                title={LaMaisonJungle.title}
+                description={LaMaisonJungle.description}
+                imageUrl={LaMaisonJungle.imageUrl}
+                link={LaMaisonJungle.link}
+              />
+            </div>{" "}
+            <div className="projects">
+              <ProjectCard
+                title={Kanap.title}
+                description={Kanap.description}
+                imageUrl={Kanap.imageUrl}
+                link={Kanap.link}
+              />
+            </div> */}
             {/* <p>
               other than hat, I love explorering emerging technologies, and
               contributor to open-source projects, as always seeking to refine

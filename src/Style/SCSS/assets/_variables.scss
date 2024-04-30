@@ -1,12 +1,15 @@
 // #F6F4F2#425664#C6AD8F
 
-body{
+.App{
     font-family: 'Signika Negative', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    width: fit-content;
 
 }
 
-a{  color: inherit; /* Use the default text color */
-    text-decoration: none; /* Remove underline */}
+a{  color: inherit; 
+    text-decoration: none; }
 
 $color-Pri : #F6F4F2;
 $color-sec : #425664;

@@ -8,7 +8,12 @@ const ProjectCard = ({ title, description, imageUrl, link }) => {
         <div className="project-link__card__details">
           <h3>{title}</h3>
           <p>{description}</p>
-          <a href={link} target="_blank" rel="noopener noreferrer">
+          <a
+            className="project-link__link"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Link to Github
           </a>
         </div>

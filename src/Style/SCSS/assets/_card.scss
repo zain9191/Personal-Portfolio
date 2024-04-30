@@ -1,21 +1,36 @@
 @import '../assets/variables';
 
 .project-link{
-    // height: 500px;
-    // width: 50px;
-    // background-color: red;
-    // border: dotted red 3px;
+
+    
     &__card{
-        
-        width: 350px;
+        // border: dotted red 3px;
+        // margin: 10px;
+        max-width: 50%;
         display: flex;
         flex-direction: column;
-        height: auto;
+        // height: auto;
+        background-color: $color-Pri;
+        border-radius: 25px;
+
+        padding: 15px;
     }
     &__img{
-        object-fit: cover;
+        // width: 450px;
+        // height: 450px;
+        // object-fit: cover;
         border-radius: 25px;
 
         
     }
+    &__link{
+        cursor: alias;
+    }
+}
+
+.projects{
+    width: 45%;
+    height: 45%;
+    margin-right: 25px;
+    // border: dotted red 2px;
 }

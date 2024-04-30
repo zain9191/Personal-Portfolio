@@ -1,13 +1,17 @@
-body {
+.App {
   font-family: "Signika Negative", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  width: fit-content;
 }
 
 a {
-  color: inherit; /* Use the default text color */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  text-decoration: none;
 }
 
 .headerDiv {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,7 +20,7 @@ a {
   height: 90px;
 }
 .headerDiv__ul {
-  width: 60%;
+  width: 70%;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -25,22 +29,25 @@ a {
 }
 .headerDiv__ul__a {
   color: #C6AD8F;
-  text-decoration: none;
   font-size: x-large;
 }
 
-body {
+.App {
   font-family: "Signika Negative", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  width: fit-content;
 }
 
 a {
-  color: inherit; /* Use the default text color */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  text-decoration: none;
 }
 
 .Home {
+  width: 100%;
   position: relative;
-  height: fit-content;
+  height: 100vh;
 }
 .Home__BG {
   opacity: 0.03;
@@ -77,35 +84,64 @@ a {
 
 .about-content__h2 {
   padding-left: 15px;
+  background-color: #C6AD8F;
+  border-radius: 10px;
 }
 
 .about-text {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  border: dotted red 3px;
 }
 .about-text__1p {
   padding-left: 15px;
-  max-width: 300px;
+  max-width: 600px;
+  background-color: #F6F4F2;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
 }
 
-body {
+.App {
   font-family: "Signika Negative", sans-serif;
+  max-width: 1200px;
+  margin: auto;
+  width: fit-content;
 }
 
 a {
-  color: inherit; /* Use the default text color */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  text-decoration: none;
 }
 
 .project-link__card {
-  width: 350px;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
-  height: auto;
+  background-color: #F6F4F2;
+  border-radius: 25px;
+  padding: 15px;
 }
 .project-link__img {
-  object-fit: cover;
   border-radius: 25px;
+}
+.project-link__link {
+  cursor: alias;
+}
+
+.projects {
+  width: 45%;
+  height: 45%;
+  margin-right: 25px;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
