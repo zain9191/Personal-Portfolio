@@ -1,5 +1,6 @@
 import React from "react";
 import LanguageAnimator from "../LanguageAnimator/languageAnimator";
+import SubTitle from "../subTitle/subTitle";
 
 const Skills = () => {
   const programmingLanguages = [
@@ -20,7 +21,10 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <div>the things that i use</div>
+      <div>
+        <SubTitle text="the things that i use:" />
+      </div>
+
       <div>
         <LanguageAnimator languages={programmingLanguages} />
       </div>

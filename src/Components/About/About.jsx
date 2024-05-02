@@ -40,7 +40,7 @@ const About = () => {
     <section id="about">
       <div className="container">
         <div className="about-content">
-          <SubTitle />
+          <SubTitle text="Get to Know:" />
           <p className="about-text__1p ">
             A dedicated frontend developer. <br />
             Specialize in creating modern, responsive web applications using

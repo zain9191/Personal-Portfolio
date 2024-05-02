@@ -8,6 +8,7 @@ import Skills from "./Components/Skills/skills";
 import Contact from "./Components/Contcat/contact";
 import '../src/Style/CSS/main.css'
 import ScrollAnimation from './Components/ScrollAnimation/scrollAnimation';
+import Footer from './Components/Footer/fotter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +26,7 @@ root.render(
     <ScrollAnimation>
       <Contact />
     </ScrollAnimation>
+    <Footer/>
   </React.StrictMode>
 );
 

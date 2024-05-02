@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
-const SubTitle = () => {
+const SubTitle = ({ text }) => {
   const subTitleRef = useRef(null);
 
   useEffect(() => {
@@ -25,10 +26,14 @@ const SubTitle = () => {
   return (
     <div className="subTitleContainer">
       <h2 ref={subTitleRef} className="subTitleContainer__h2">
-        Get to Know:{" "}
+        {text}
       </h2>
     </div>
   );
+};
+
+SubTitle.propTypes = {
+  text: PropTypes.string.isRequired,
 };
 
 export default SubTitle;
