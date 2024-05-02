@@ -1,11 +1,29 @@
 
+@import '../assets/variables';
 
 .about-content{
-    height: 100vh;
-    top: 0;
-    right: 0;
-
+    // height: 100vh;
+    // top: 0;
+    // right: 0;
+    display: flex;
+    flex-direction: column;
 
 }
 
 
+.about__grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $color-sec;
+    width: fit-content;
+    // > * {
+    //     flex-basis: 700px;
+    // }
+}
+
+.projects{
+    width: 100%;
+    // border: dotted red 3px;
+}
