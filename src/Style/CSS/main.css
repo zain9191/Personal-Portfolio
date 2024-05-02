@@ -1,7 +1,5 @@
-.App {
+body {
   font-family: "Signika Negative", sans-serif;
-  margin: auto;
-  width: fit-content;
 }
 
 a {
@@ -31,10 +29,8 @@ a {
   font-size: x-large;
 }
 
-.App {
+body {
   font-family: "Signika Negative", sans-serif;
-  margin: auto;
-  width: fit-content;
 }
 
 a {
@@ -80,10 +76,8 @@ a {
   background-color: black;
 }
 
-.App {
+body {
   font-family: "Signika Negative", sans-serif;
-  margin: auto;
-  width: fit-content;
 }
 
 a {
@@ -110,10 +104,8 @@ a {
   width: 100%;
 }
 
-.App {
+body {
   font-family: "Signika Negative", sans-serif;
-  margin: auto;
-  width: fit-content;
 }
 
 a {
@@ -228,10 +220,8 @@ a {
     width: 100%;
   }
 }
-.App {
+body {
   font-family: "Signika Negative", sans-serif;
-  margin: auto;
-  width: fit-content;
 }
 
 a {
@@ -278,10 +268,8 @@ a {
   justify-content: space-between;
 }
 
-.App {
+body {
   font-family: "Signika Negative", sans-serif;
-  margin: auto;
-  width: fit-content;
 }
 
 a {
