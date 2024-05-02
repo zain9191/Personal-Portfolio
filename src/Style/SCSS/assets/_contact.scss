@@ -1,0 +1,58 @@
+
+@import '../assets/variables';
+
+/* Contact section styles */
+#contact {
+    background-color: $color-Pri;
+    color: $color-sec;
+    padding: 50px 0;
+  
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  
+    form {
+      margin-top: 20px;
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+    }
+  
+    label {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid $color-the;
+      border-radius: 5px;
+    }
+  
+    textarea {
+      resize: vertical;
+    }
+  
+    button {
+      background-color: $color-the;
+      color: $color-Pri;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken($color-the, 10%);
+      }
+    }
+  }

@@ -12,7 +12,7 @@ const LanguageAnimator = ({ languages }) => {
     return () => clearInterval(interval);
   }, [languages]);
 
-  const verticalStep = 180 / Math.ceil(languages.length / 2);
+  // const verticalStep = 180 / Math.ceil(languages.length / 2);
   return (
     <div className="sphere">
       {languages.map((language, index) => {

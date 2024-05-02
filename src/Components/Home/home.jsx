@@ -40,7 +40,7 @@ function Home() {
           </ScrollAnimation>
         </div>
       </div>
-      <hr className="Home__line"></hr>
+      {/* <hr className="Home__line"></hr> */}
     </div>
   );
 }
