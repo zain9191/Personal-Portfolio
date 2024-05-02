@@ -1,9 +1,10 @@
 import React from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import SubTitle from "../subTitle/subTitle";
-import KasaHome from "../../assets/Kasa-home.png";
-import P6Home from "../../assets/P6Home.png";
-import P5Home from "../../assets/KanapHome.png";
+import KasaHome from "../../assets/Porojects/Kasa-home.png";
+import P6Home from "../../assets/Porojects/P6Home.png";
+import P5Home from "../../assets/Porojects/KanapHome.png";
+import P4Home from "../../assets/Porojects/pantherHome.png";
 
 const About = () => {
   const Kasa = {
@@ -13,7 +14,7 @@ const About = () => {
     link: "https://github.com/zain9191/P7-Kasa",
     tools: ["JavaScript", "CSS", "HTML", "React", "Node"],
   };
-  const LaMaisonJungle = {
+  const HotTakes = {
     title: "HotTakes",
     description: "Une application d'avis gastronomiques",
     imageUrl: P6Home,
@@ -25,6 +26,14 @@ const About = () => {
     description: "Un site web qui vendre des Kanaps",
     imageUrl: P5Home,
     link: "https://github.com/zain9191/P5-Dev-Web-Kanap",
+    tools: ["JavaScript", "CSS", "HTML", "Node"],
+  };
+  const panther = {
+    title: "La-Panthere",
+    description: "Un site web qui vendre des Kanaps",
+    imageUrl: P4Home,
+    link: "https://github.com/zain9191/La-Panthere",
+    tools: ["CSS", "HTML"],
   };
 
   return (
@@ -51,21 +60,31 @@ const About = () => {
             </div>{" "}
             <div className="projects">
               <ProjectCard
-                title={LaMaisonJungle.title}
-                description={LaMaisonJungle.description}
-                imageUrl={LaMaisonJungle.imageUrl}
-                link={LaMaisonJungle.link}
-                tools={LaMaisonJungle.tools}
+                title={HotTakes.title}
+                description={HotTakes.description}
+                imageUrl={HotTakes.imageUrl}
+                link={HotTakes.link}
+                tools={HotTakes.tools}
               />
-            </div>{" "}
-            {/* <div className="projects">
+            </div>
+            <div className="projects">
               <ProjectCard
                 title={Kanap.title}
                 description={Kanap.description}
                 imageUrl={Kanap.imageUrl}
                 link={Kanap.link}
+                tools={Kanap.tools}
               />
-            </div> */}
+            </div>{" "}
+            <div className="projects">
+              <ProjectCard
+                title={panther.title}
+                description={panther.description}
+                imageUrl={panther.imageUrl}
+                link={panther.link}
+                tools={panther.tools}
+              />
+            </div>
             {/* <p>
               other than hat, I love explorering emerging technologies, and
               contributor to open-source projects, as always seeking to refine

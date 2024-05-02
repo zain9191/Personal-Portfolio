@@ -1,5 +1,5 @@
 import React from "react";
-import githubLogo from "../../assets/githubLogo.png";
+import githubLogo from "../../assets/Logos/githubLogo.png";
 import toolLogos from "../ToolLogos/toolLogos";
 
 const ProjectCard = ({ title, description, imageUrl, link, tools = [] }) => {

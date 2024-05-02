@@ -1,10 +1,10 @@
-import reactLogo from "../../assets/React.png";
-import htmlLogo from "../../assets/HtmlLogo.png";
-import cssLogo from "../../assets/cssLogo.png";
-import javascriptLogo from "../../assets/javaScriptLogo.png";
-import nodeLogo from "../../assets/NodeLogo.png";
-import typeScript from "../../assets/typeScriptLogo.png";
-import angular from "../../assets/angularLogo.png";
+import reactLogo from "../../assets/Logos/React.png";
+import htmlLogo from "../../assets/Logos/HtmlLogo.png";
+import cssLogo from "../../assets/Logos/cssLogo.png";
+import javascriptLogo from "../../assets/Logos/javaScriptLogo.png";
+import nodeLogo from "../../assets/Logos/NodeLogo.png";
+import typeScript from "../../assets/Logos/typeScriptLogo.png";
+import angular from "../../assets/Logos/angularLogo.png";
 
 const toolLogos = {
   React: reactLogo,
