@@ -39,22 +39,19 @@ a {
 }
 
 .Home {
-  width: 100%;
-  position: relative;
-  height: fit-content;
+  height: 100vh;
+  padding-bottom: 10px;
 }
 .Home__BG {
   opacity: 0.03;
   filter: sepia(100%);
   position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: auto;
 }
 .Home__img {
-  filter: sepia(30%);
-  border-radius: 10px;
+  width: 100%;
+  height: auto;
 }
 .Home__container {
   display: flex;
@@ -62,20 +59,15 @@ a {
   justify-content: space-between;
 }
 .Home__h1 {
-  font-size: 250px;
-  font-weight: 800;
-  font-family: "Signika Negative";
-  margin-bottom: 15px;
+  font-size: 20vw;
+  font-weight: 900;
+  font-family: "Signika Negative", sans-serif;
+  margin-bottom: 2vw;
+  margin-top: 9vw;
 }
 .Home__h1__dot {
   color: #C6AD8F;
 }
-.Home__line {
-  height: 1px;
-  width: 70%;
-  background-color: black;
-}
-
 body {
   font-family: "Signika Negative", sans-serif;
 }
@@ -89,6 +81,12 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: #F6F4F2;
+}
+.about-content__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about__grid {
@@ -102,6 +100,21 @@ a {
 
 .projects {
   width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInSection {
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 body {
@@ -200,7 +213,7 @@ a {
   padding-left: 15px;
   background-color: #C6AD8F;
   border-radius: 10px;
-  height: 50px;
+  height: 70px;
   width: 30vw;
   display: flex;
   align-items: center;

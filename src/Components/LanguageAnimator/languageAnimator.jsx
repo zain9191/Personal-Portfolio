@@ -1,3 +1,4 @@
+// LanguageAnimator.js
 import React, { useState, useEffect } from "react";
 
 const LanguageAnimator = ({ languages }) => {
@@ -12,7 +13,6 @@ const LanguageAnimator = ({ languages }) => {
     return () => clearInterval(interval);
   }, [languages]);
 
-  // const verticalStep = 180 / Math.ceil(languages.length / 2);
   return (
     <div className="sphere">
       {languages.map((language, index) => {
@@ -24,7 +24,7 @@ const LanguageAnimator = ({ languages }) => {
               currentLanguageIndex === index ? "active" : ""
             }`}
             style={{
-              transform: `rotateY(${angle}deg) translateZ(125px)`, // Adjusted for new sphere size
+              transform: `rotateY(${angle}deg) translateZ(125px)`,
             }}
           >
             {language}

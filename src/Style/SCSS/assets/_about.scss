@@ -6,6 +6,17 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    // border: dotted red 3px;
+    background-color: $color-Pri;
+
+    &__div{
+        // border: dotted red 4px;
+        // height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 
 }
 
@@ -23,5 +34,21 @@
 
 .projects{
     width: 100%;
-    // border: dotted red 3px;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fadeInSection {
+    opacity: 0; // Start invisible
+    animation-fill-mode: forwards; // Keep the state after animation ends
+  }
+  

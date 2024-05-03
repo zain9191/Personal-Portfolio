@@ -7,25 +7,24 @@ import  About from "./Components/About/About";
 import Skills from "./Components/Skills/skills";
 import Contact from "./Components/Contcat/contact";
 import '../src/Style/CSS/main.css'
-import ScrollAnimation from './Components/ScrollAnimation/scrollAnimation';
+// import ScrollAnimation from './Components/ScrollAnimation/scrollAnimation';
 import Footer from './Components/Footer/fotter';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <ScrollAnimation>
+    {/* <ScrollAnimation> */}
       <Home />
-    </ScrollAnimation>
-    <ScrollAnimation>
+    {/* </ScrollAnimation> */}
+    {/* <ScrollAnimation> */}
       <About />
-    </ScrollAnimation>
-    <ScrollAnimation>
+    {/* </ScrollAnimation> */}
+    {/* <ScrollAnimation> */}
       <Skills />
-    </ScrollAnimation>
-    <ScrollAnimation>
+    {/* </ScrollAnimation> */}
+    {/* <ScrollAnimation> */}
       <Contact />
-    </ScrollAnimation>
+    {/* </ScrollAnimation> */}
     <Footer/>
   </React.StrictMode>
 );
