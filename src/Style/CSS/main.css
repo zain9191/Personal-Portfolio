@@ -132,8 +132,9 @@ a {
   flex-direction: row;
   background-color: #F6F4F2;
   border-radius: 20px;
-  margin: 10px;
+  margin: 15px;
   height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .project-a__card:hover {
   transform: translateY(-5px);
@@ -158,6 +159,8 @@ a {
   width: 60%;
   max-width: 75%;
   margin-right: auto;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .project-a__details {
   display: flex;
@@ -217,6 +220,8 @@ a {
   width: 30vw;
   display: flex;
   align-items: center;
+  padding: 15px;
+  margin-bottom: 25px;
 }
 .subTitleContainer__h2 {
   white-space: nowrap;

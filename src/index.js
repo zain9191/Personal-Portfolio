@@ -8,11 +8,18 @@ import Skills from "./Components/Skills/skills";
 import Contact from "./Components/Contcat/contact";
 import '../src/Style/CSS/main.css'
 // import ScrollAnimation from './Components/ScrollAnimation/scrollAnimation';
-import Footer from './Components/Footer/fotter';
+import Footer from './Components/Footer/footer';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+    <Router>
+
     {/* <ScrollAnimation> */}
       <Home />
     {/* </ScrollAnimation> */}
@@ -26,6 +33,7 @@ root.render(
       <Contact />
     {/* </ScrollAnimation> */}
     <Footer/>
+    </Router>
   </React.StrictMode>
 );
 

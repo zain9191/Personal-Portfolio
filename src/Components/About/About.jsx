@@ -53,7 +53,6 @@ const About = () => {
           </div>
           <SubTitle text="What have I done:" />
 
-          <p>:</p>
           <div className="about__grid">
             {projects.map((project, index) => (
               <div className="projects" key={index}>
