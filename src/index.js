@@ -9,7 +9,7 @@ import Contact from "./Components/Contcat/contact";
 import '../src/Style/CSS/main.css'
 // import ScrollAnimation from './Components/ScrollAnimation/scrollAnimation';
 import Footer from './Components/Footer/footer';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 
