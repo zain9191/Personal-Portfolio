@@ -6,9 +6,9 @@ import HomeBG from "../../assets/HomeBG.png";
 function Home() {
   return (
     <div className="Home">
-      {/* <div> */}
-      {/* <img src={HomeBG} className="Home__BG" alt="Background" /> */}
-      {/* </div> */}
+      <div>
+        {/* <img src={HomeBG} className="Home__BG" alt="Background" /> */}
+      </div>
       <div className="Home__container">
         <div>
           <h1 className="Home__h1">
@@ -17,7 +17,8 @@ function Home() {
           <br />
           <h2 className="Home__h2">
             My name is Zain Frayha, I am a web developer.
-            <br /> <br /> <p>Here is my portfolio, take a look</p>
+            <br /> <br /> <p>Here is my portfolio, take a look</p>{" "}
+            <p>I bulied websites, let me know if you need one</p>
           </h2>
         </div>
         <div>

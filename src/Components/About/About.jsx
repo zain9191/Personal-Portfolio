@@ -42,8 +42,8 @@ const About = () => {
     <section id="about">
       <div className="container">
         <div className="about-content">
-          <div className="about-content__div">
-            <SubTitle text="Who Am I:" />
+          <div className="about-content__div__1">
+            <p>Who Am I?</p>
             <p className="about-text__1p ">
               A dedicated frontend developer. <br />
               Specialize in creating modern, responsive web applications using
@@ -51,20 +51,23 @@ const About = () => {
             </p>
             <br />
           </div>
-          <SubTitle text="What have I done:" />
 
-          <div className="about__grid">
-            {projects.map((project, index) => (
-              <div className="projects" key={index}>
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  imageUrl={project.imageUrl}
-                  link={project.link}
-                  tools={project.tools}
-                />
-              </div>
-            ))}
+          <div className="about-content__div__2">
+            <p className="about-content__div__2__p">What have I done?</p>
+
+            <div className="about__grid">
+              {projects.map((project, index) => (
+                <div className="projects" key={index}>
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    imageUrl={project.imageUrl}
+                    link={project.link}
+                    tools={project.tools}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

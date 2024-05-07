@@ -1,54 +1,163 @@
-
 @import '../assets/variables';
 
-.about-content{
-
+.about-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    // border: dotted red 3px;
-    background-color: $color-Pri;
+}
 
-    &__div{
-        // border: dotted red 4px;
-        // height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+.about-content__div__1{
+        background-color: $color-Pri;
 
-
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    border-left: 5px solid $color-the; /* Accent color */
+    position: relative;
+    overflow: hidden;
+    color: $color-sec; /* Assuming you have a text color variable */
+    // border: dotted red 5px;
 }
 
 
-.about__grid{
+.about-content__div__1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.8));
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-content__div__1:hover::before {
+    transform: translateX(0);
+}
+
+.about-content__div__1 p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.about-text__1p {
+    font-size: 1.2rem; /* Adjust based on your design preference */
+    line-height: 1.6;
+    padding-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about__grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    // background-color: $color-sec;
-    background-color: $color-the;
+    background-color: $color-the; /* Adjusted background color */
     width: fit-content;
-
 }
 
-.projects{
+.projects {
     width: 100%;
 }
 
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+
+
+
+
+
+
+
+
+.about-content__div__2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // padding-left: 50px;
+    border-left: 5px solid $color-the; /* Accent color */
+    position: relative;
+    overflow: hidden;
+    background-color: $color-Pri;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100vw;
+    // border: dotted red 4px;
+}
+
+.about-content__div__2:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.about-content__div__2__p {
+    font-size: 1.8rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0;
+    // border: dotted red 4px;
+    margin: 10px;
+    padding: 0;
+    border-radius: 10px;
+
+}
+
+.about__grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $color-Pri; /* Adjusted background color */
+    width: fit-content;
+    // border: dotted red 4px;
+
+}
+
+.projects {
+    width: calc(33% - 20px); /* Three items per row with gap */
+    min-width: 280px; /* Responsive minimum width */
+    border: 1px solid $color-sec; /* Subtle border */
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.projects:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover for 3D effect */
+}
+
+/* Ensuring responsive design for smaller screens */
+@media (max-width: 768px) {
+    .projects {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .about-content__div__2 p {
+        font-size: 1.2rem; /* Smaller font size for very small screens */
     }
-  }
-  
-  .fadeInSection {
-    opacity: 0; // Start invisible
-    animation-fill-mode: forwards; // Keep the state after animation ends
-  }
-  
+
+    .projects {
+        width: 100%; /* Full width on very small devices */
+    }
+}

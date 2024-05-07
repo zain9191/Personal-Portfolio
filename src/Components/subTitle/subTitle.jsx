@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
-// import './SubTitle.css'; // Make sure to create this CSS file
 
 const SubTitle = ({ text }) => {
   const subTitleRef = useRef(null);
@@ -23,7 +22,7 @@ const SubTitle = ({ text }) => {
     const resetAnimation = () => {
       if (node) {
         node.style.animation = "none";
-        void node.offsetHeight; // Trigger reflow
+        void node.offsetHeight; 
         node.style.animation = "";
       }
     };
