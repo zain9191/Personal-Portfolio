@@ -104,7 +104,9 @@
     // border: dotted red 4px;
 }
 
-.about-content__div__2:hover {
+.about-content__div__2__p:hover {
+    // animation: fadeIn 1.5s ease-in-out;
+
     transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
@@ -118,6 +120,9 @@
     margin: 10px;
     padding: 0;
     border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1.5s ease-in-out;
 
 }
 
@@ -135,14 +140,13 @@
 .projects {
     width: calc(33% - 20px); /* Three items per row with gap */
     min-width: 280px; /* Responsive minimum width */
-    border: 1px solid $color-sec; /* Subtle border */
-    border-radius: 5px;
+    border: 1px solid $color-the; /* Subtle border */
+    border-radius: 10px;
     overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out;
 }
 
 .projects:hover {
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover for 3D effect */
+    // box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover for 3D effect */
 }
 
 /* Ensuring responsive design for smaller screens */
