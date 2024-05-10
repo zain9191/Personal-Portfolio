@@ -21,8 +21,8 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <div>
-        <SubTitle text="the things that i use:" />
+      <div className="skills__div">
+        <SubTitle text="THE THINGS THAT I USE:" />
       </div>
 
       <div>
