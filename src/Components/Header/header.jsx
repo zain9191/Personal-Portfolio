@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="headerDiv">
-      <img className="headerDiv__logoS" src="logoS.png" alt="logo" />
+      {/* <img className="headerDiv__logoS" src="logoS.png" alt="logo" /> */}
       <ul className="headerDiv__ul">
         <li>
           <a href="Home" className="headerDiv__ul__a">
@@ -17,7 +17,7 @@ function Header() {
           </a>
         </li>
         <li>
-          <a href="#" className="headerDiv__ul__a">
+          <a href="skills" className="headerDiv__ul__a">
             Skills
           </a>
         </li>

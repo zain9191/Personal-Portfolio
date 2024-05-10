@@ -6,6 +6,11 @@
     flex-direction: row;
     justify-content: space-between;
     // border: dotted red 2px;
+    background-color: $color-Pri;
+    border-right: 5px solid $color-the; 
+    border-left: 5px solid $color-the; 
+    border-radius: 20px;
+
 
     &__logoS{
         height: 90px;
@@ -15,7 +20,7 @@
 
 
 &__ul{
-    width: 70%;
+    width: 100%;
     list-style: none;
     display: flex;
     flex-direction: row;

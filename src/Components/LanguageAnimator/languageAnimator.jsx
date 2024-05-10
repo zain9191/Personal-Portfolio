@@ -1,4 +1,3 @@
-// LanguageAnimator.js
 import React, { useState, useEffect } from "react";
 
 const LanguageAnimator = ({ languages }) => {
@@ -24,7 +23,7 @@ const LanguageAnimator = ({ languages }) => {
               currentLanguageIndex === index ? "active" : ""
             }`}
             style={{
-              transform: `rotateY(${angle}deg) translateZ(125px)`,
+              transform: `rotateY(${angle}deg) translateZ(50px)`,
             }}
           >
             {language}

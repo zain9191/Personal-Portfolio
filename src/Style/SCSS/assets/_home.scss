@@ -1,7 +1,16 @@
+@import '../assets/variables';
+
 .Home{
     // width: auto;
+    background-color: $color-Pri;
+    padding-top: 50px;
     height: 100vh;
     padding-bottom: 10px;
+    color: $color-sec;
+    border-left: 5px solid $color-the; /* Accent color */
+    margin: 20px 0;
+    border-radius: 20px;
+
     &__BG{
 
         opacity: 0.03;
@@ -33,7 +42,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        // border:  dotted red 3px;
 
     }
     &__h1{
@@ -48,12 +56,13 @@
 
     }
     &__h2{
-        // border: dotted red 3px;
         font-size: 1.8rem;
-        // font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
+        padding-left: 10px;
         margin: 0;
+                // border:  dotted red 3px;
+
     }
 
     &__line{

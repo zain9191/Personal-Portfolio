@@ -21,11 +21,11 @@ const Skills = () => {
 
   return (
     <div className="skills">
-      <div className="skills__div">
+      <div className="skills__div__1">
         <SubTitle text="THE THINGS THAT I USE:" />
       </div>
 
-      <div>
+      <div className="skills__div__2">
         <LanguageAnimator languages={programmingLanguages} />
       </div>
     </div>

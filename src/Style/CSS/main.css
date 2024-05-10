@@ -13,12 +13,16 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #f2f2f2;
+  border-right: 5px solid #6699cc;
+  border-left: 5px solid #6699cc;
+  border-radius: 20px;
 }
 .headerDiv__logoS {
   height: 90px;
 }
 .headerDiv__ul {
-  width: 70%;
+  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -40,9 +44,25 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Signika Negative", sans-serif;
+  max-width: fit-content;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .Home {
+  background-color: #f2f2f2;
+  padding-top: 50px;
   height: 100vh;
   padding-bottom: 10px;
+  color: #555555;
+  border-left: 5px solid #6699cc; /* Accent color */
+  margin: 20px 0;
+  border-radius: 20px;
 }
 .Home__BG {
   opacity: 0.03;
@@ -73,6 +93,7 @@ a {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  padding-left: 10px;
   margin: 0;
 }
 body {
@@ -88,6 +109,7 @@ a {
 .about-content {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .about-content__div__1 {
@@ -98,7 +120,8 @@ a {
   flex-direction: column;
   justify-content: center;
   padding-left: 50px;
-  border-left: 5px solid #6699cc; /* Accent color */
+  border-left: 5px solid #6699cc;
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
   color: #555555; /* Assuming you have a text color variable */
@@ -145,7 +168,7 @@ a {
   overflow: hidden;
   background-color: #f2f2f2;
   margin-top: 30px;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   width: fit-content;
@@ -167,6 +190,7 @@ a {
   text-align: center;
   padding: 50px;
   animation: fadeIn 1.5s ease-in-out;
+  color: #555555;
 }
 
 .about__grid {
@@ -316,21 +340,35 @@ a {
   opacity: 1;
 }
 
+body {
+  font-family: "Signika Negative", sans-serif;
+  max-width: fit-content;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .subTitleContainer {
-  padding-left: 15px;
   background-color: #6699cc;
+  color: #555555;
   border-radius: 10px;
   height: 70px;
+  width: auto;
   display: flex;
   align-items: center;
-  padding: 15px;
   margin-bottom: 25px;
+  margin-left: 10px;
 }
 .subTitleContainer__h2 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid #6699cc;
-  animation: typing 10s steps(400) forwards;
+  animation: typing 5s steps(400) forwards;
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 @keyframes typing {
@@ -355,6 +393,7 @@ a {
   position: relative;
   transform-style: preserve-3d;
   animation: spin 20s linear infinite;
+  margin-right: 50px;
 }
 
 .language {
@@ -367,10 +406,7 @@ a {
   transition: transform 2s;
   font-size: 16px;
   font-weight: bold;
-}
-
-.active {
-  color: #6699cc;
+  color: #555555;
 }
 
 @keyframes spin {
@@ -381,13 +417,26 @@ a {
     transform: rotateY(360deg);
   }
 }
+body {
+  font-family: "Signika Negative", sans-serif;
+  max-width: fit-content;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .skills {
-  margin: 15px;
+  margin: 20px 0;
   display: flex;
   height: 50vh;
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  border-left: 5px solid #6699cc;
+  border-radius: 20px;
+  background-color: #f2f2f2;
 }
 
 body {
@@ -404,8 +453,9 @@ a {
   background-color: #f2f2f2;
   color: #555555;
   padding: 50px 0;
-  max-width: 100vw;
-  border: dotted red 3px;
+  border-left: 5px solid #6699cc;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 #contact .container {
   max-width: 800px;
@@ -426,7 +476,7 @@ a {
 #contact input[type=text],
 #contact input[type=email],
 #contact textarea {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #6699cc;
