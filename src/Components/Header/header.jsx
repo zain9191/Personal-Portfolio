@@ -7,18 +7,23 @@ function Header() {
       {/* <img className="headerDiv__logoS" src="logoS.png" alt="logo" /> */}
       <ul className="headerDiv__ul">
         <li>
-          <a href="Home" className="headerDiv__ul__a">
+          <a href="#IDHome" className="headerDiv__ul__a">
             Home
           </a>
         </li>
         <li>
-          <a href="about" className="headerDiv__ul__a">
+          <a href="#IDabout" className="headerDiv__ul__a">
             About
           </a>
         </li>
         <li>
-          <a href="skills" className="headerDiv__ul__a">
+          <a href="#IDskills" className="headerDiv__ul__a">
             Skills
+          </a>
+        </li>{" "}
+        <li>
+          <a href="#contact" className="headerDiv__ul__a">
+            Contact
           </a>
         </li>
       </ul>

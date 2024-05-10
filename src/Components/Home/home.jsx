@@ -5,7 +5,7 @@ import HomeBG from "../../assets/HomeBG.png";
 
 function Home() {
   return (
-    <div className="Home">
+    <div className="Home" id="IDHome">
       <div>
         {/* <img src={HomeBG} className="Home__BG" alt="Background" /> */}
       </div>

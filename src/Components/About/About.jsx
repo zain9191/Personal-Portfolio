@@ -39,7 +39,7 @@ const projects = [
 
 const About = () => {
   return (
-    <section id="about">
+    <section id="IDabout">
       <div className="container">
         <div className="about-content">
           <div className="about-content__div__1">
