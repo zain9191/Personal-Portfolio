@@ -1,7 +1,6 @@
 import React from "react";
 // import ScrollAnimation from "../ScrollAnimation/scrollAnimation";
 import HomeImg from "../../assets/HomeImg.png";
-import HomeBG from "../../assets/HomeBG.png";
 
 function Home() {
   return (

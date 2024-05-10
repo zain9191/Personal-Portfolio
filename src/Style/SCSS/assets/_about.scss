@@ -100,7 +100,9 @@
     border: 2px solid $color-the; 
     border-radius: 10px;
     overflow: hidden;
-    min-width: 280px; /* Adjust as needed */
+    // min-width: 280px; 
+    width: 45%;
+    margin: 10px;
 }
 
 .projects:hover {
@@ -108,21 +110,21 @@
 }
 
 @media (max-width: 768px) {
-    /* Adjust projects grid for smaller screens */
     .projects {
-        width: 100%; 
+        width: 50%; 
+        // border: dotted red 5px;
     }
 }
 
+
+
 @media (max-width: 480px) {
-    /* Adjust font size for smaller screens */
     .about-content__div__2__p {
         font-size: 1.2rem;
     }
 }
 
 @media (max-width: 768px) {
-    /* Change grid direction for smaller screens */
     .about__grid {
         display: flex;
         flex-direction: column;
@@ -131,7 +133,6 @@
         width: 200%;
     }
     
-    /* Responsive adjustments for second content div */
     .about-content__div__2 {
         width: 100%;
         margin-top: 20px;
@@ -139,12 +140,3 @@
     }
 }
 
-/* Additional media query for full width projects */
-@media (max-width: 480px) {
-    /* Adjust projects to occupy full width on smaller screens */
-    .projects {
-        width: 100%;
-        margin-left: 0; /* Reset margin */
-        margin-right: 0; /* Reset margin */
-    }
-}

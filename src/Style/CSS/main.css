@@ -64,13 +64,9 @@ a {
   margin: 20px 0;
   border-radius: 20px;
 }
-.Home__BG {
-  opacity: 0.03;
-  position: absolute;
-  width: 100%;
-  height: auto;
-}
 .Home__img {
+  background-color: #6699cc; /* Light blue color */
+  mix-blend-mode: multiply;
   width: 100%;
   height: auto;
 }
@@ -204,7 +200,8 @@ a {
   border: 2px solid #6699cc;
   border-radius: 10px;
   overflow: hidden;
-  min-width: 280px; /* Adjust as needed */
+  width: 45%;
+  margin: 10px;
 }
 
 .projects:hover {
@@ -212,39 +209,26 @@ a {
 }
 
 @media (max-width: 768px) {
-  /* Adjust projects grid for smaller screens */
   .projects {
-    width: 100%;
+    width: 50%;
   }
 }
 @media (max-width: 480px) {
-  /* Adjust font size for smaller screens */
   .about-content__div__2__p {
     font-size: 1.2rem;
   }
 }
 @media (max-width: 768px) {
-  /* Change grid direction for smaller screens */
   .about__grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 200%;
   }
-  /* Responsive adjustments for second content div */
   .about-content__div__2 {
     width: 100%;
     margin-top: 20px;
     padding: 20px;
-  }
-}
-/* Additional media query for full width projects */
-@media (max-width: 480px) {
-  /* Adjust projects to occupy full width on smaller screens */
-  .projects {
-    width: 100%;
-    margin-left: 0; /* Reset margin */
-    margin-right: 0; /* Reset margin */
   }
 }
 body {
@@ -258,7 +242,6 @@ a {
 }
 
 .project-a__card {
-  width: 95%;
   display: flex;
   flex-direction: row;
   background-color: #f2f2f2;
@@ -284,7 +267,6 @@ a {
 .project-a__img {
   border-radius: 20px;
   width: 60%;
-  max-width: 75%;
   margin: 15px;
   box-shadow: rgba(102, 153, 204, 0.2) 0px 20px 20px, rgba(102, 153, 204, 0.1) 0px -6px 12px, rgba(102, 153, 204, 0.1) 0px 2px 4px, rgba(102, 153, 204, 0.15) 0px 6px 7px, rgba(102, 153, 204, 0.05) 0px -1px 3px;
 }
@@ -314,11 +296,6 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-.projects {
-  width: 48%;
-  margin-bottom: 15px;
 }
 
 .tool-logo {

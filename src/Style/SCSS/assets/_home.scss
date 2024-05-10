@@ -11,23 +11,10 @@
     margin: 20px 0;
     border-radius: 20px;
 
-    &__BG{
-
-        opacity: 0.03;
-
-        // filter: sepia(100%);
-
-        position: absolute;
-        // width: auto;
-        width: 100%;
-        height: auto;
-
-
-
-        }
-
     &__img{
-        // filter: sepia(30%);
+        background-color: #6699cc; /* Light blue color */
+        mix-blend-mode: multiply;
+        // filter: sepia(30%); 
         // border-radius: 10px;
         // border:  dotted blue 3px;
         // position: ;

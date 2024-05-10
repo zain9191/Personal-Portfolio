@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import SubTitle from "../subTitle/subTitle";
 import KasaHome from "../../assets/Porojects/Kasa-home.png";
 import P6Home from "../../assets/Porojects/P6Home.png";
 import KanapHome from "../../assets/Porojects/KanapHome.png";
