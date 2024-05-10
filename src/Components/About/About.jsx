@@ -49,6 +49,9 @@ const About = () => {
               Specialize in creating modern, responsive web applications using
               React.js.
             </p>
+            <br></br>
+            <p>I bulied websites, let me know if you need one</p>
+
             <br />
           </div>
 

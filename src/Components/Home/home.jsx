@@ -16,9 +16,8 @@ function Home() {
           </h1>
           <br />
           <h2 className="Home__h2">
-            My name is Zain Frayha, I am a web developer.
-            <br /> <br /> <p>Here is my portfolio, take a look</p>{" "}
-            <p>I bulied websites, let me know if you need one</p>
+            I am a web developer.
+            <br /> <br /> <p>Take a look at my portfolio</p>{" "}
           </h2>
         </div>
         <div>

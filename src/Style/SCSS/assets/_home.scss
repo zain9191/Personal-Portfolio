@@ -48,11 +48,15 @@
 
     }
     &__h2{
-        
+        // border: dotted red 3px;
+        font-size: 1.8rem;
+        // font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        margin: 0;
     }
 
     &__line{
 
     }
 }
-

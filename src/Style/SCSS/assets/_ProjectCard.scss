@@ -1,62 +1,54 @@
 @import '../assets/variables';
 
-.project-a{
-    
-    &__card{
-        width: 90%;
+.project-a {
+    &__card {
+        width: 95%;
         display: flex;
         flex-direction: row;
         background-color: $color-Pri;
         border-radius: 20px;
-        margin: 15px;
+        margin: 10px;
         height: 400px;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-    
-        &__h3{
+        
+        &__h3 {
             text-align: center;
             color: $color-sec;
-
             font-family: "Montserrat", sans-serif;
-            font-size: 25px;
-            
+            font-size: 1.9rem;
         }
-        &__description{
+        
+        &__description {
             text-align: center;
             color: $color-sec;
-
             font-family: "Montserrat", sans-serif;
-            font-size: 18px;
+            font-size: 1.1rem;
             font-weight: 400;
-            line-height: 25.67px;
-
+            line-height: 1.2rem;
         }
-
-
     }
-    &__img{
-        // border: dotted red 3px;
-        // background-color: $color-Pri;
-        border-radius: 45px;
+    
+    &__img {
+        border-radius: 20px;
         width: 60%;
         max-width: 75%;
-        margin-left: auto;
-        margin: 20px ;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        margin: 15px;
+        box-shadow: rgba(102, 153, 204, 0.2) 0px 20px 20px, rgba(102, 153, 204, 0.1) 0px -6px 12px, rgba(102, 153, 204, 0.1) 0px 2px 4px, rgba(102, 153, 204, 0.15) 0px 6px 7px, rgba(102, 153, 204, 0.05) 0px -1px 3px;
 
-        &:hover{
 
-            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;            }
-        
+
 
     }
-    &__details{
+    
+    &__details {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         width: 35%;
+        max-width: 40;
     }
-    &__link{
+    
+    &__link {
         cursor: alias;
         display: flex;
         flex-direction: row;
@@ -64,13 +56,15 @@
         color: $color-sec;
 
     }
-    &__tools{
+    
+    &__tools {
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        &--logos{
+        
+        &--logos {
             width: 100%;
             max-width: fit-content;
             display: flex;
@@ -78,26 +72,20 @@
             justify-content: space-around;
         }
     }
-    }
-
-
-// .about__grid{
-//     // display: flex;
-//     // flex-direction: row;
-//     // flex-wrap: wrap;
-//     // width: fit-content;
-// }    
-.projects{
-    width: 48%;
 }
 
-.tool-logo{
+.projects {
+    width: 48%;
+    // border: dotted red 3px;
+    margin-bottom: 15px;
+}
+
+.tool-logo {
     width: 30px;
     height: 30px;
 }
 
-.gitLogo{
+.gitLogo {
     height: 30px;
     width: 45px;
-
 }

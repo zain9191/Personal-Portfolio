@@ -1,16 +1,16 @@
 @import '../assets/variables';
 
+/* General styles */
 .about-content {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
-.about-content__div__1{
-        background-color: $color-Pri;
-
+/* First content div */
+.about-content__div__1 {
+    background-color: $color-Pri;
     height: 100vh;
-    width: 100vw;
+    width: inherit;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,9 +19,7 @@
     position: relative;
     overflow: hidden;
     color: $color-sec; /* Assuming you have a text color variable */
-    // border: dotted red 5px;
 }
-
 
 .about-content__div__1::before {
     content: '';
@@ -55,43 +53,11 @@
     animation: fadeIn 1.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about__grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: $color-the; /* Adjusted background color */
-    width: fit-content;
-}
-
-.projects {
-    width: 100%;
-}
-
-
-
-
-
-
-
-
-
+/* Second content div */
 .about-content__div__2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // padding-left: 50px;
     border-left: 5px solid $color-the; /* Accent color */
     position: relative;
     overflow: hidden;
@@ -100,13 +66,10 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
-    width: 100vw;
-    // border: dotted red 4px;
+    width: fit-content;
 }
 
 .about-content__div__2__p:hover {
-    // animation: fadeIn 1.5s ease-in-out;
-
     transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
@@ -116,52 +79,72 @@
     text-transform: uppercase;
     letter-spacing: 1.2px;
     margin: 0;
-    // border: dotted red 4px;
     margin: 10px;
     padding: 0;
     border-radius: 10px;
     text-align: center;
     padding: 50px;
     animation: fadeIn 1.5s ease-in-out;
-
 }
 
+/* Projects grid */
 .about__grid {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: $color-Pri; /* Adjusted background color */
-    width: fit-content;
-    // border: dotted red 4px;
-
+    background-color: $color-Pri; 
 }
 
 .projects {
-    width: calc(33% - 20px); /* Three items per row with gap */
-    min-width: 280px; /* Responsive minimum width */
-    border: 1px solid $color-the; /* Subtle border */
+    border: 2px solid $color-the; 
     border-radius: 10px;
     overflow: hidden;
+    // width: calc(33.33% - 20px); /* Adjust as needed */
+    min-width: 280px; /* Adjust as needed */
 }
 
 .projects:hover {
-    // box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover for 3D effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
 }
 
-/* Ensuring responsive design for smaller screens */
 @media (max-width: 768px) {
+    /* Adjust projects grid for smaller screens */
     .projects {
-        width: calc(50% - 20px); /* Two items per row on smaller screens */
+        width: 100%; 
     }
 }
 
 @media (max-width: 480px) {
-    .about-content__div__2 p {
-        font-size: 1.2rem; /* Smaller font size for very small screens */
+    /* Adjust font size for smaller screens */
+    .about-content__div__2__p {
+        font-size: 1.2rem;
     }
+}
 
+@media (max-width: 768px) {
+    /* Change grid direction for smaller screens */
+    .about__grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        width: 100vw;
+    }
+    
+    /* Responsive adjustments for second content div */
+    .about-content__div__2 {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+    }
+}
+
+/* Additional media query for full width projects */
+@media (max-width: 480px) {
+    /* Adjust projects to occupy full width on smaller screens */
     .projects {
-        width: 100%; /* Full width on very small devices */
+        width: 100%;
+        margin-left: 0; /* Reset margin */
+        margin-right: 0; /* Reset margin */
     }
 }

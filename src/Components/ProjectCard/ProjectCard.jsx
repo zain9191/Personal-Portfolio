@@ -3,7 +3,7 @@ import githubLogo from "../../assets/Logos/githubLogo.png";
 import toolLogos from "../ToolLogos/toolLogos";
 
 const ProjectCard = ({ title, description, imageUrl, link, tools = [] }) => {
-  console.log("Tool Logos:", toolLogos);
+  // console.log("Tool Logos:", toolLogos);
 
   return (
     <div className="project-a__card">
