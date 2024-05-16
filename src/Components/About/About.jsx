@@ -1,9 +1,23 @@
 import React from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
-import KasaHome from "../../assets/Porojects/Kasa-home.png";
-import P6Home from "../../assets/Porojects/P6Home.png";
-import KanapHome from "../../assets/Porojects/KanapHome.png";
 import PantherHome from "../../assets/Porojects/pantherHome.png";
+
+import KasaHome from "../../assets/Porojects//kasa/Kasa-home.png";
+import Kasa1 from "../../assets/Porojects//kasa/Kasa-1.png";
+import Kasa2 from "../../assets/Porojects//kasa/Kasa-2.png";
+import Kasa3 from "../../assets/Porojects//kasa/Kasa-3.png";
+import Kasa4 from "../../assets/Porojects//kasa/Kasa-4.png";
+import Kasa5 from "../../assets/Porojects//kasa/Kasa-5.png";
+
+import P6Home from "../../assets/Porojects/hotTakes/P6Home.png";
+import P6Home1 from "../../assets/Porojects/hotTakes/P6Home1.png";
+import P6Home2 from "../../assets/Porojects/hotTakes/P6Home2.png";
+import P6Home3 from "../../assets/Porojects/hotTakes/P6Home3.png";
+
+import KanapHome from "../../assets/Porojects/kanap/KanapHome.png";
+import KanapHome1 from "../../assets/Porojects/kanap/KanapHome1.png";
+import KanapHome2 from "../../assets/Porojects/kanap/KanapHome2.png";
+import KanapHome3 from "../../assets/Porojects/kanap/KanapHome3.png";
 
 const projects = [
   {
@@ -12,6 +26,7 @@ const projects = [
     imageUrl: KasaHome,
     link: "https://github.com/zain9191/P7-Kasa",
     tools: ["JavaScript", "CSS", "HTML", "React", "Node"],
+    images: [KasaHome, Kasa1, Kasa2, Kasa3, Kasa4, Kasa5],
   },
   {
     title: "HotTakes",
@@ -19,6 +34,7 @@ const projects = [
     imageUrl: P6Home,
     link: "https://github.com/zain9191/Web-Developer-P6",
     tools: ["TypeScript", "CSS", "HTML", "Angular", "Node"],
+    images: [P6Home, P6Home1, P6Home2, P6Home3],
   },
   {
     title: "Kanap",
@@ -26,6 +42,7 @@ const projects = [
     imageUrl: KanapHome,
     link: "https://github.com/zain9191/P5-Dev-Web-Kanap",
     tools: ["JavaScript", "CSS", "HTML", "Node"],
+    images: [KanapHome, KanapHome1, KanapHome2, KanapHome3],
   },
   {
     title: "La Panthère",
@@ -33,6 +50,7 @@ const projects = [
     imageUrl: PantherHome,
     link: "https://github.com/zain9191/La-Panthere",
     tools: ["CSS", "HTML"],
+    images: [PantherHome],
   },
 ];
 
@@ -65,6 +83,7 @@ const About = () => {
                     imageUrl={project.imageUrl}
                     link={project.link}
                     tools={project.tools}
+                    images={project.images}
                   />
                 </div>
               ))}

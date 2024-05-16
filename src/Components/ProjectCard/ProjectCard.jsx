@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import the carousel styles
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import githubLogo from "../../assets/Logos/githubLogo.png";
@@ -22,7 +24,14 @@ const modalStyles = {
   },
 };
 
-const ProjectCard = ({ title, description, imageUrl, link, tools = [] }) => {
+const ProjectCard = ({
+  title,
+  description,
+  imageUrl,
+  link,
+  tools = [],
+  images = [],
+}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -79,11 +88,13 @@ const ProjectCard = ({ title, description, imageUrl, link, tools = [] }) => {
         <button onClick={closeModal} className="modal-close-button">
           <FontAwesomeIcon icon={faTimes} />
         </button>
-        <img
-          src={imageUrl}
-          alt={title}
-          style={{ width: "100%", height: "100%" }}
-        />
+        <Carousel showThumbs={false}>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img src={image} alt={`Slide ${index}`} />
+            </div>
+          ))}
+        </Carousel>
       </Modal>
     </div>
   );
