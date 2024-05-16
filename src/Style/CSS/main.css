@@ -253,15 +253,20 @@ a {
 }
 
 .projects {
-  border: 2px solid #6699cc;
   border-radius: 10px;
   overflow: hidden;
   width: 45%;
   margin: 10px;
+  transition: transform 0.3s ease;
 }
 
 .projects:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 23px 24px rgba(0, 0, 0, 0.15);
+  transform: scale(1.1);
+}
+
+.projects:hover .project-title-hover {
+  color: #6699cc;
 }
 
 @media (max-width: 768px) {

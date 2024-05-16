@@ -49,8 +49,7 @@ const About = () => {
               React.js.
             </p>
             <br></br>
-            <p>I bulied websites, let me know if you need one</p>
-
+            <p>I built websites, let me know if you need one</p>
             <br />
           </div>
 

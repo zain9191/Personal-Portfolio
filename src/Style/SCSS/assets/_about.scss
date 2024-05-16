@@ -97,16 +97,21 @@
 }
 
 .projects {
-    border: 2px solid $color-the; 
     border-radius: 10px;
     overflow: hidden;
-    // min-width: 280px; 
     width: 45%;
     margin: 10px;
+    transition: transform 0.3s ease;
 }
 
 .projects:hover {
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+    // color: #6699cc;
+    box-shadow: 0 23px 24px rgba(0,0,0,0.15);
+    transform: scale(1.1);
+
+}
+.projects:hover .project-title-hover {
+    color: $color-the;
 }
 
 @media (max-width: 768px) {
