@@ -1,7 +1,13 @@
-import React from "react";
-// import './Header.css';
+import React, { useState } from "react";
+// import "./Header.css";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header">
       <div className="header__container">
@@ -10,7 +16,10 @@ function Header() {
             MyPortfolio
           </a>
         </div>
-        <nav className="header__nav">
+        <button className="burger-menu" onClick={toggleMenu}>
+          ☰
+        </button>
+        <nav className={`header__nav ${menuOpen ? "header__nav--open" : ""}`}>
           <ul className="header__nav-list">
             <li className="header__nav-item">
               <a href="#IDabout" className="header__nav-link">
