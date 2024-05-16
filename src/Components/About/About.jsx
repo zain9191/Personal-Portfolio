@@ -29,7 +29,7 @@ const projects = [
   },
   {
     title: "La Panthère",
-    description: "Un site web qui vend des Kanaps",
+    description: "L'agence est spécialisée dans le design web.",
     imageUrl: PantherHome,
     link: "https://github.com/zain9191/La-Panthere",
     tools: ["CSS", "HTML"],

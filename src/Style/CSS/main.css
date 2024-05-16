@@ -1,39 +1,79 @@
-body {
-  font-family: "Signika Negative", sans-serif;
-  max-width: fit-content;
+/* Variables */
+:root {
+  --color-primary: #f2f2f2; /* Primary color */
+  --color-secondary: #555555; /* Secondary color */
+  --color-accent: #6699cc; /* Tertiary color */
+  --font-size-large: 1.5rem;
+  --font-size-medium: 1rem;
+  --transition-speed: 0.3s;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.headerDiv {
+/* Header styling */
+.header {
+  background-color: var(--color-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
   width: 100%;
+  z-index: 1000;
+}
+
+.header__container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  background-color: #f2f2f2;
-  border-right: 5px solid #6699cc;
-  border-left: 5px solid #6699cc;
-  border-radius: 20px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
-.headerDiv__logoS {
-  height: 90px;
+
+/* Logo styling */
+.header__logo {
+  font-size: var(--font-size-large);
+  font-weight: bold;
 }
-.headerDiv__ul {
-  width: 100%;
+
+.header__logo-link {
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: color var(--transition-speed);
+}
+
+.header__logo-link:hover {
+  color: var(--color-accent);
+}
+
+/* Navigation styling */
+.header__nav-list {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-decoration: none;
-}
-.headerDiv__ul__a {
-  color: #6699cc;
-  font-size: x-large;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
 }
 
+.header__nav-link {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: var(--font-size-medium);
+  transition: color var(--transition-speed);
+}
+
+.header__nav-link:hover {
+  color: var(--color-accent);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 body {
   font-family: "Signika Negative", sans-serif;
   max-width: fit-content;

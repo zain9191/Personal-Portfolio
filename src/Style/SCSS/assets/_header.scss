@@ -1,39 +1,84 @@
-@import '../assets/variables';
-
-.headerDiv{
+/* Variables */
+:root {
+    --color-primary: #f2f2f2; /* Primary color */
+    --color-secondary: #555555; /* Secondary color */
+    --color-accent: #6699cc; /* Tertiary color */
+    --font-size-large: 1.5rem;
+    --font-size-medium: 1rem;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
     width: 100%;
+    z-index: 1000;
+  }
+  
+  .header__container {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    // border: dotted red 2px;
-    background-color: $color-Pri;
-    border-right: 5px solid $color-the; 
-    border-left: 5px solid $color-the; 
-    border-radius: 20px;
-
-
-    &__logoS{
-        height: 90px;
-        // width: 80px;
-        
-    }
-
-
-&__ul{
-    width: 100%;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  /* Logo styling */
+  .header__logo {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+  }
+  
+  .header__logo-link {
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: color var(--transition-speed);
+  }
+  
+  .header__logo-link:hover {
+    color: var(--color-accent);
+  }
+  
+  /* Navigation styling */
+  .header__nav {
+  }
+  
+  .header__nav-list {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .header__nav-item {
+  }
+  
+  .header__nav-link {
     text-decoration: none;
-
-    &__a{
-        // border: dotted red 3px;
-        color: $color-the;
-        font-size: x-large;
-
-
+    color: var(--color-secondary);
+    font-size: var(--font-size-medium);
+    transition: color var(--transition-speed);
+  }
+  
+  .header__nav-link:hover {
+    color: var(--color-accent);
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .header__container {
+      flex-direction: column;
+      align-items: flex-start;
     }
-}
-}
-
+  
+    .header__nav-list {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
