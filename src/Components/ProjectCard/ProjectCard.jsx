@@ -18,9 +18,11 @@ const modalStyles = {
     maxWidth: "90%",
     maxHeight: "90%",
     position: "relative",
+    zIndex: 1001,
   },
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.75)",
+    zIndex: 1000,
   },
 };
 
