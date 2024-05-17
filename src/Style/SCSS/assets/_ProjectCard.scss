@@ -1,8 +1,5 @@
 .project-a {
-  
   &__card {
-    // border: dotted red 3px;
-
     display: flex;
     flex-direction: row;
     background-color: $color-Pri;
@@ -10,12 +7,10 @@
     margin: 20px;
     padding: 20px;
     height: 450px;
-    // Removed box-shadow for a cleaner look
     transition: transform 0.3s ease;
 
     &:hover {
       transform: translateY(-10px);
-      // Removed box-shadow on hover
     }
   }
 
@@ -23,7 +18,7 @@
     text-align: center;
     color: $color-sec;
     font-family: "Montserrat", sans-serif;
-    font-size: 2em; // Adjusted font-size for larger text
+    font-size: 2em;
     font-weight: 700;
     margin-bottom: 10px;
   }
@@ -42,20 +37,16 @@
     border-radius: 20px;
     width: 60%;
     margin-right: 20px;
-    // Toned down box-shadow
-    box-shadow: 0 10px 10px rgba(102, 153, 204, 0.1), 
-                0 -3px 6px rgba(102, 153, 204, 0.05), 
-                0 1px 2px rgba(102, 153, 204, 0.05), 
-                0 3px 3px rgba(102, 153, 204, 0.1), 
-                0 -1px 1px rgba(102, 153, 204, 0.025);
+    box-shadow: 0 10px 10px rgba(102, 153, 204, 0.1),
+      0 -3px 6px rgba(102, 153, 204, 0.05), 0 1px 2px rgba(102, 153, 204, 0.05),
+      0 3px 3px rgba(102, 153, 204, 0.1), 0 -1px 1px rgba(102, 153, 204, 0.025);
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       transform: scale(1.05);
-      // Toned down box-shadow on hover
-      box-shadow: 0 8px 16px rgba(102, 153, 204, 0.125), 
-                  0 3px 8px rgba(102, 153, 204, 0.075);
+      box-shadow: 0 8px 16px rgba(102, 153, 204, 0.125),
+        0 3px 8px rgba(102, 153, 204, 0.075);
     }
   }
 
@@ -97,21 +88,20 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      // Ensure reasonable size
       max-width: 100%;
       overflow: hidden;
     }
 
     .tool {
       display: flex;
-      // flex-direction: column;
       align-items: center;
-      // border: dotted red 2px;
 
       .tool-logo {
         width: 40px;
         height: 40px;
-        &:hover{
+        transition: transform 0.3s ease;
+
+        &:hover {
           transform: scale(1.1);
         }
       }
@@ -122,7 +112,7 @@
 .modal-close-button {
   position: absolute;
   top: 10px;
-  // right: 10px;
+  right: 10px;
   background: $color-sec;
   border: none;
   color: #fff;
@@ -131,8 +121,77 @@
   transition: transform 0.3s ease;
   z-index: 10;
 
-  
   &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.carousel .slide {
+  background: none;
+}
+
+.carousel .thumbs-wrapper {
+  margin: 20px 0 0;
+  padding: 0;
+  background: none;
+}
+
+.carousel .thumb {
+  border: none;
+  box-shadow: none;
+}
+
+.carousel .control-dots .dot {
+  background: $color-sec;
+  box-shadow: none;
+  transition: opacity 0.25s ease-in;
+}
+
+.carousel .control-dots .dot.selected,
+.carousel .control-dots .dot:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.carousel .carousel-status {
+  top: unset;
+  bottom: 10px;
+  right: 10px;
+  color: $color-sec;
+  font-size: 1.2rem;
+}
+
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  font-size: 2.5rem;
+  color: $color-sec;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    color: $color-the;
     transform: scale(1.2);
   }
 }

@@ -15,10 +15,10 @@ const modalStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    maxWidth: "90%",
-    maxHeight: "90%",
-    position: "relative",
-    zIndex: 1001,
+    padding: 0,
+    border: "none",
+    background: "none",
+    overflow: "hidden",
   },
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.75)",
@@ -86,17 +86,24 @@ const ProjectCard = ({
         onRequestClose={closeModal}
         style={modalStyles}
         contentLabel="Image Preview"
+        shouldFocusAfterRender={true}
       >
         <button onClick={closeModal} className="modal-close-button">
           <FontAwesomeIcon icon={faTimes} />
         </button>
-        <Carousel showThumbs={false}>
-          {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Slide ${index}`} />
-            </div>
-          ))}
-        </Carousel>
+        <div className="carousel-container">
+          <Carousel showThumbs={false} infiniteLoop useKeyboardArrows>
+            {images.map((image, index) => (
+              <div key={index} className="carousel-image-container">
+                <img
+                  src={image}
+                  alt={`Slide ${index}`}
+                  className="carousel-image"
+                />
+              </div>
+            ))}
+          </Carousel>
+        </div>
       </Modal>
     </div>
   );
