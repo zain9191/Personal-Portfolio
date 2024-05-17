@@ -22,7 +22,7 @@ const Skills = () => {
   return (
     <div className="skills" id="IDskills">
       <div className="skills__div__1">
-        <SubTitle text="THE THINGS THAT I USE:" />
+        <SubTitle text=" THE THINGS THAT I USE:" />
       </div>
 
       <div className="skills__div__2">

@@ -55,8 +55,8 @@ const ProjectCard = ({
         onClick={openModal}
       />
       <div className="project-a__details">
-        <h3 className="project-a__card__h3 project-title-hover">{title}</h3>
-        <p className="project-a__card__description">{description}</p>
+        <h3 className="project-a__h3 project-title-hover">{title}</h3>
+        <p className="project-a__description">{description}</p>
 
         <div className="project-a__tools">
           <span> built with:</span>
