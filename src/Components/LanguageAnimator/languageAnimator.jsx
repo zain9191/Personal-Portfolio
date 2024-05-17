@@ -1,42 +1,44 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const LanguageAnimator = ({ languages }) => {
-  const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
-  const sphereRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [lastX, setLastX] = useState(0);
-  const [lastY, setLastY] = useState(0);
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
-  const [hovering, setHovering] = useState(false);
+  const sphereRef = useRef(null);
+  const [isHovering, setIsHovering] = useState(false);
+  const [lastX, setLastX] = useState(0);
+  const [lastY, setLastY] = useState(0);
+  const [sphereSize, setSphereSize] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentLanguageIndex(
-        (prevIndex) => (prevIndex + 1) % languages.length
-      );
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [languages]);
+    const handleResize = () => {
+      const size = Math.min(window.innerWidth, window.innerHeight) * 0.4;
+      setSphereSize(size);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const calculatePosition = (index, total) => {
     const phi = Math.acos(-1 + (2 * index) / total);
     const theta = Math.sqrt(total * Math.PI) * phi;
     return {
-      x: 100 * Math.cos(theta) * Math.sin(phi),
-      y: 100 * Math.sin(theta) * Math.sin(phi),
-      z: 100 * Math.cos(phi),
+      x: (sphereSize / 2) * Math.cos(theta) * Math.sin(phi),
+      y: (sphereSize / 2) * Math.sin(theta) * Math.sin(phi),
+      z: (sphereSize / 2) * Math.cos(phi),
     };
   };
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
+  const handleMouseEnter = (e) => {
+    setIsHovering(true);
     setLastX(e.clientX);
     setLastY(e.clientY);
   };
 
   const handleMouseMove = (e) => {
-    if (isDragging) {
+    if (isHovering) {
       const deltaX = e.clientX - lastX;
       const deltaY = e.clientY - lastY;
       setRotationY((prev) => prev + deltaX * 0.1);
@@ -46,93 +48,63 @@ const LanguageAnimator = ({ languages }) => {
     }
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
+  const handleMouseLeave = () => {
+    setIsHovering(false);
   };
 
   useEffect(() => {
-    const handleTouchStart = (e) => {
-      setIsDragging(true);
-      setLastX(e.touches[0].clientX);
-      setLastY(e.touches[0].clientY);
-    };
-
-    const handleTouchMove = (e) => {
-      if (isDragging) {
-        const deltaX = e.touches[0].clientX - lastX;
-        const deltaY = e.touches[0].clientY - lastY;
-        setRotationY((prev) => prev + deltaX * 0.1);
-        setRotationX((prev) => prev - deltaY * 0.1);
-        setLastX(e.touches[0].clientX);
-        setLastY(e.touches[0].clientY);
-      }
-    };
-
-    const handleTouchEnd = () => {
-      setIsDragging(false);
-    };
-
     const sphereElement = sphereRef.current;
-    sphereElement.addEventListener("mousedown", handleMouseDown);
+
+    sphereElement.addEventListener("mouseenter", handleMouseEnter);
     sphereElement.addEventListener("mousemove", handleMouseMove);
-    sphereElement.addEventListener("mouseup", handleMouseUp);
-    sphereElement.addEventListener("mouseleave", handleMouseUp);
-    sphereElement.addEventListener("touchstart", handleTouchStart);
-    sphereElement.addEventListener("touchmove", handleTouchMove);
-    sphereElement.addEventListener("touchend", handleTouchEnd);
+    sphereElement.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      sphereElement.removeEventListener("mousedown", handleMouseDown);
+      sphereElement.removeEventListener("mouseenter", handleMouseEnter);
       sphereElement.removeEventListener("mousemove", handleMouseMove);
-      sphereElement.removeEventListener("mouseup", handleMouseUp);
-      sphereElement.removeEventListener("mouseleave", handleMouseUp);
-      sphereElement.removeEventListener("touchstart", handleTouchStart);
-      sphereElement.removeEventListener("touchmove", handleTouchMove);
-      sphereElement.removeEventListener("touchend", handleTouchEnd);
+      sphereElement.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, [isDragging, lastX, lastY]);
+  }, [isHovering, lastX, lastY]);
 
   useEffect(() => {
     let animationFrameId;
 
     const animate = () => {
-      if (!hovering) {
-        setRotationY((prev) => prev + 0.1);
-      }
+      setRotationY((prev) => prev + 0.1);
       animationFrameId = requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [hovering]);
+  }, []);
 
   return (
-    <div
-      className="sphere"
-      ref={sphereRef}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
-      style={{
-        transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`,
-      }}
-    >
-      {languages.map((language, index) => {
-        const { x, y, z } = calculatePosition(index, languages.length);
-        return (
-          <span
-            key={index}
-            className={`language ${
-              currentLanguageIndex === index ? "active" : ""
-            }`}
-            style={{
-              transform: `translate3d(${x}px, ${y}px, ${z}px)`,
-            }}
-          >
-            {language}
-          </span>
-        );
-      })}
+    <div className="Language__container">
+      <div
+        className="sphere"
+        ref={sphereRef}
+        style={{
+          width: `${sphereSize}px`,
+          height: `${sphereSize}px`,
+          transform: `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`,
+        }}
+      >
+        {languages.map((language, index) => {
+          const { x, y, z } = calculatePosition(index, languages.length);
+          return (
+            <span
+              key={index}
+              className="language"
+              style={{
+                transform: `translate3d(${x}px, ${y}px, ${z}px) rotateY(${-rotationY}deg) rotateX(${-rotationX}deg)`,
+              }}
+            >
+              {language}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 };
