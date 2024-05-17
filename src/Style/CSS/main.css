@@ -319,7 +319,7 @@ a {
 
 @media (max-width: 768px) {
   .projects {
-    width: 50%;
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
@@ -327,12 +327,11 @@ a {
     font-size: 1.2rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .about__grid {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 200%;
+    width: 100%;
   }
   .about-content__div__2 {
     width: 100%;
@@ -579,31 +578,44 @@ a {
 .sphere {
   position: relative;
   transform-style: preserve-3d;
-  animation: spin 20s linear infinite;
-  margin-right: 50px;
-}
-
-.language {
-  top: 50%;
-  left: 50%;
-  transform-origin: center center -10px;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  perspective: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 2s;
+  cursor: grab;
+}
+
+.sphere:active {
+  cursor: grabbing;
+}
+
+.language {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s, opacity 0.5s, font-size 0.5s;
   font-size: 16px;
   font-weight: bold;
   color: #555555;
+  opacity: 0.5;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes spin {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
+.active {
+  font-size: 20px;
+  color: #6699cc;
+  opacity: 1;
+  transform: scale(1.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
+
 body {
   font-family: "Signika Negative", sans-serif;
   max-width: fit-content;

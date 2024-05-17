@@ -1,41 +1,42 @@
-
 @import '../assets/variables';
 
 .sphere {
+  position: relative;
+  transform-style: preserve-3d;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
 
-  
-    position: relative;
-    transform-style: preserve-3d;
-    animation: spin 20s linear infinite;
-    // border: dotted red 3px;
-  margin-right: 50px;
-    
-  }
-  
-  .language {
-    
-    top: 50%;
-    left: 50%;
-    transform-origin: center center -10px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 2s;
-    font-size: 16px; 
-    font-weight: bold;
-    color: $color-sec;
-  }
-  
-  .active {
-    // color: $color-the;
-  }
-  
-  @keyframes spin {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(360deg);
-    }
-  }
-  
+.sphere:active {
+  cursor: grabbing;
+}
+
+.language {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s, opacity 0.5s, font-size 0.5s;
+  font-size: 16px;
+  font-weight: bold;
+  color: $color-sec;
+  opacity: 0.5;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  font-size: 20px;
+  color: $color-the;
+  opacity: 1;
+  transform: scale(1.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
