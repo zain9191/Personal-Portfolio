@@ -1,13 +1,9 @@
 import React from "react";
-// import ScrollAnimation from "../ScrollAnimation/scrollAnimation";
 import HomeImg from "../../assets/HomeImg.png";
 
 function Home() {
   return (
     <div className="Home" id="IDHome">
-      <div>
-        {/* <img src={HomeBG} className="Home__BG" alt="Background" /> */}
-      </div>
       <div className="Home__container">
         <div>
           <h1 className="Home__h1">
