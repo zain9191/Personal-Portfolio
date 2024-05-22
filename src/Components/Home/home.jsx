@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="Home" id="IDHome">
       <div className="Home__container">
-        <div>
+        <div className="Home__div1">
           <h1 className="Home__h1">
             Hello<span className="Home__h1__dot">.</span>
           </h1>
@@ -15,7 +15,7 @@ function Home() {
             <br /> <br /> <p>Take a look at my portfolio</p>{" "}
           </h2>
         </div>
-        <div className="Home__img__container">
+        <div>
           <img src={HomeImg} className="Home__img" alt="Portfolio" />
         </div>
       </div>

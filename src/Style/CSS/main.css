@@ -169,17 +169,17 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+.Home__div1 {
+  padding-left: 50px;
+}
 .Home__img {
   background-color: #6699cc;
   mix-blend-mode: multiply;
-  width: 100%;
+  width: 96%;
   height: auto;
   padding-left: auto;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgb(0, 0, 0);
-}
-.Home__img__container {
-  width: 94%;
 }
 .Home__container {
   display: flex;
@@ -201,7 +201,7 @@ html, body {
 }
 @media (min-width: 768px) {
   .Home__h1 {
-    font-size: 10em; /*  larger screens */
+    font-size: 15vw; /*  larger screens */
   }
 }
 .Home__h1__dot {
@@ -209,13 +209,14 @@ html, body {
 }
 .Home__h2 {
   font-size: 5vw; /* Responsive font size using vw */
-  letter-spacing: 0.1rem;
+  letter-spacing: 2px;
   padding-left: 10px;
   margin: 0;
 }
 @media (min-width: 768px) {
   .Home__h2 {
-    font-size: 2rem; /* Fixed font size for larger screens */
+    font-size: 3vw; /* Fixed font size for larger screens */
+    letter-spacing: 2px;
   }
 }
 
