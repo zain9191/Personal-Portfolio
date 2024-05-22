@@ -6,7 +6,7 @@ const SubTitle = ({ text }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    const shouldBeVisible = window.scrollY > window.innerHeight;
+    const shouldBeVisible = window.scrollY > window.innerHeight / 2;
     setIsVisible(shouldBeVisible);
   };
 
@@ -22,7 +22,7 @@ const SubTitle = ({ text }) => {
     const resetAnimation = () => {
       if (node) {
         node.style.animation = "none";
-        void node.offsetHeight; 
+        void node.offsetHeight;
         node.style.animation = "";
       }
     };

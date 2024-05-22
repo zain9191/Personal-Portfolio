@@ -16,12 +16,21 @@
         mix-blend-mode: multiply;
         width: 100%;
         height: auto;
+        padding-left: auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+
+        &__container{
+            width: 94%;
+        }
+
     }
 
     &__container {
         display: flex;
         flex-direction: column; /* Default to column for small screens */
         justify-content: space-between;
+        align-items: center;
         
         @media (min-width: 768px) {
             flex-direction: row; /* Change to row for larger screens */

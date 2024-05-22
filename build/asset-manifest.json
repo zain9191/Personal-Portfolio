@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Personal-Portfolio/static/css/main.e4982055.css",
-    "main.js": "/Personal-Portfolio/static/js/main.f2db2048.js",
+    "main.css": "/Personal-Portfolio/static/css/main.2d742332.css",
+    "main.js": "/Personal-Portfolio/static/js/main.05573362.js",
     "static/js/453.ace21015.chunk.js": "/Personal-Portfolio/static/js/453.ace21015.chunk.js",
     "static/media/pantherHome.png": "/Personal-Portfolio/static/media/pantherHome.452ba97591c8accb56c0.png",
     "static/media/KanapHome.png": "/Personal-Portfolio/static/media/KanapHome.f18a566c14426ccd8864.png",
@@ -21,12 +21,12 @@
     "static/media/HomeImg.png": "/Personal-Portfolio/static/media/HomeImg.1f6aa21af769fe843618.png",
     "static/media/githubLogo.png": "/Personal-Portfolio/static/media/githubLogo.be20d7dd3d0b289efb2c.png",
     "index.html": "/Personal-Portfolio/index.html",
-    "main.e4982055.css.map": "/Personal-Portfolio/static/css/main.e4982055.css.map",
-    "main.f2db2048.js.map": "/Personal-Portfolio/static/js/main.f2db2048.js.map",
+    "main.2d742332.css.map": "/Personal-Portfolio/static/css/main.2d742332.css.map",
+    "main.05573362.js.map": "/Personal-Portfolio/static/js/main.05573362.js.map",
     "453.ace21015.chunk.js.map": "/Personal-Portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4982055.css",
-    "static/js/main.f2db2048.js"
+    "static/css/main.2d742332.css",
+    "static/js/main.05573362.js"
   ]
 }

@@ -27,7 +27,6 @@ const Skills = () => {
       <div className="skills__div__1">
         <SubTitle text=" THE THINGS THAT I USE:" />
       </div>
-
       <div className="skills__div__2">
         <LanguageAnimator languages={programmingLanguages} />
       </div>

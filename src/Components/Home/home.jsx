@@ -15,7 +15,7 @@ function Home() {
             <br /> <br /> <p>Take a look at my portfolio</p>{" "}
           </h2>
         </div>
-        <div>
+        <div className="Home__img__container">
           <img src={HomeImg} className="Home__img" alt="Portfolio" />
         </div>
       </div>

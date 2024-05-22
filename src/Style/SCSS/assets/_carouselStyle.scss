@@ -1,0 +1,26 @@
+.carousel .control-arrow {
+    // position: absolute;
+    top: 50%; /* Position arrow at 50% of the container height */
+    transform: translateY(-50%); /* Center the arrow vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 30px; /* Adjust width as needed */
+    // height: 30px; /* Adjust height as needed */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Rounded buttons */
+    color: #fff; /* White arrow color */
+    border: none; /* No border */
+    z-index: 1; /* Ensure the arrows are above the carousel images */
+  }
+  
+  .carousel .control-arrow:hover {
+    // top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  }
+  
+
+  

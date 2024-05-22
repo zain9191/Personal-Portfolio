@@ -3,6 +3,12 @@ $color-Pri : #f2f2f2;
 $color-sec : #555555;
 $color-the : #6699cc;
 
+html, body {
+    margin: auto;
+    padding: 0;
+    width: 98%;
+    overflow-x: hidden;
+}
 
 
 $color-primary: #f2f2f2; /* Primary color */
