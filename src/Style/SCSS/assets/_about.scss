@@ -8,7 +8,7 @@
 
 .about-content__div__1 {
     background-color: $color-primary;
-    height: 100vh;
+    height: 60vh;
     width: inherit;
     display: flex;
     flex-direction: column;
@@ -40,11 +40,24 @@
 .about-content__div__1 p {
     margin: 0;
     padding: 0;
-    font-size: $font-size-large;
+    font-size: 3vw; // Default for large screens
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.2px;
 }
+
+@media (max-width: 768px) {
+    .about-content__div__1 p {
+        font-size: 4vw; // Font size for tablet screens
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content__div__1 p {
+        font-size: 3vw; // Font size for phone screens
+    }
+}
+
 
 .about-text__1p {
     font-size: $font-size-medium;

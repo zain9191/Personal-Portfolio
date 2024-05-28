@@ -1,41 +1,51 @@
-
-
 @import '../assets/variables';
+
 .subTitleContainer {
-    background-color: $color-the;
-    color: $color-sec;
-    border-radius: 10px;
-    // padding: 0 20px ;
-    height: 70px;
-    width: auto;
-    display: flex; 
-    align-items: center;
-    // padding: 15px;
-    margin-bottom: 25px;
-    margin-left: 10px;
-    // border: dotted red 3px;
+  background-color: $color-accent;
+  color: $color-secondary;
+  border-radius: 10px;
+  height: 70px;
+  width: auto;
+  display: flex; 
+  align-items: center;
+  margin-bottom: 25px;
+  margin-left: 10px;
 
-
-    &__h2{
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: .15em solid $color-the; 
-        animation: typing 5s steps(400) forwards;
-
-
-            font-size: 1.2rem; /* Adjust the font size as needed */
+  &__h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid $color-accent; 
+    animation: typing 5s steps(400) forwards;
     font-weight: bold;
     letter-spacing: 1px;
+    font-size: 2vw; /* Default for large screens */
+  }
+}
 
-    }
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
   }
-  
+}
+
+/* Media Queries for Responsive Font Sizes */
+@media (max-width: 820px) {
+  .subTitleContainer__h2 {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .subTitleContainer__h2 {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .subTitleContainer__h2 {
+    font-size: 4vw;
+  }
+}

@@ -15,7 +15,6 @@ const Skills = () => {
     "Json",
     "HTML",
     "SCSS",
-    "Angular",
     "TypeScript",
     "Express.js",
     "Git",

@@ -2,10 +2,10 @@
 @import '../assets/variables';
 
 #contact {
-    background-color: $color-Pri;
-    color: $color-sec;
+    background-color: $color-primary;
+    color: $color-secondary;
     padding: 50px 0;
-    border-left: 5px solid $color-the; 
+    border-left: 5px solid $color-accent; 
     border-radius: 20px;
     margin-bottom: 20px;
 
@@ -38,7 +38,7 @@
       width: 90%;
       padding: 10px;
       font-size: 1rem;
-      border: 1px solid $color-the;
+      border: 1px solid $color-accent;
       border-radius: 5px;
     }
   
@@ -47,8 +47,8 @@
     }
   
     button {
-      background-color: $color-the;
-      color: $color-Pri;
+      background-color: $color-accent;
+      color: $color-accent;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
@@ -57,7 +57,7 @@
       transition: background-color 0.3s ease;
   
       &:hover {
-        background-color: darken($color-the, 10%);
+        background-color: darken($color-accent, 10%);
       }
     }
   }
