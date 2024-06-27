@@ -1,32 +1,39 @@
 {
   "files": {
-    "main.css": "/Personal-Portfolio/static/css/main.5b815765.css",
-    "main.js": "/Personal-Portfolio/static/js/main.46647129.js",
+    "main.css": "/Personal-Portfolio/static/css/main.a81e4686.css",
+    "main.js": "/Personal-Portfolio/static/js/main.73589103.js",
     "static/js/453.ace21015.chunk.js": "/Personal-Portfolio/static/js/453.ace21015.chunk.js",
-    "static/media/pantherHome.png": "/Personal-Portfolio/static/media/pantherHome.452ba97591c8accb56c0.png",
     "static/media/KanapHome.png": "/Personal-Portfolio/static/media/KanapHome.f18a566c14426ccd8864.png",
     "static/media/Kasa-home.png": "/Personal-Portfolio/static/media/Kasa-home.c1475730d018708393bc.png",
     "static/media/KanapHome2.png": "/Personal-Portfolio/static/media/KanapHome2.64b32fcca47e2d240b28.png",
     "static/media/KanapHome3.png": "/Personal-Portfolio/static/media/KanapHome3.e3f8b944f7fc7d2b7418.png",
     "static/media/KanapHome1.png": "/Personal-Portfolio/static/media/KanapHome1.56418b9e9a28cd5e0a47.png",
+    "static/media/pantherHome1.png": "/Personal-Portfolio/static/media/pantherHome1.a9ab6b4d93e3e9c18564.png",
     "static/media/Kasa-2.png": "/Personal-Portfolio/static/media/Kasa-2.1f226af8f6a432324fd2.png",
+    "static/media/pantherHome3.png": "/Personal-Portfolio/static/media/pantherHome3.36a6c5d3db14b8dff264.png",
     "static/media/Kasa-4.png": "/Personal-Portfolio/static/media/Kasa-4.b0bf74c8b974328cb4a1.png",
+    "static/media/pantherHome2.png": "/Personal-Portfolio/static/media/pantherHome2.a9b862f0353c558fbd95.png",
+    "static/media/pantherHome.png": "/Personal-Portfolio/static/media/pantherHome.5d63a4de7bbfe2430217.png",
     "static/media/Kasa-1.png": "/Personal-Portfolio/static/media/Kasa-1.146ca9d5e5ef2f887589.png",
     "static/media/Kasa-3.png": "/Personal-Portfolio/static/media/Kasa-3.3b41ba57743e5a813360.png",
     "static/media/P6Home2.png": "/Personal-Portfolio/static/media/P6Home2.1ab80a02f6f0160c4039.png",
     "static/media/P6Home.png": "/Personal-Portfolio/static/media/P6Home.2409d133cb0056ce6409.png",
     "static/media/Kasa-5.png": "/Personal-Portfolio/static/media/Kasa-5.2d22d6429a92329708d1.png",
     "static/media/P6Home3.png": "/Personal-Portfolio/static/media/P6Home3.d19a0f8d1cd33481b489.png",
+    "static/media/Kasa-home-s.png": "/Personal-Portfolio/static/media/Kasa-home-s.bc3e5609c02168939935.png",
+    "static/media/pantherHomeSmall.png": "/Personal-Portfolio/static/media/pantherHomeSmall.84ec94d121c46900db8b.png",
+    "static/media/KanapHomeSmall.png": "/Personal-Portfolio/static/media/KanapHomeSmall.815f432ae19fd00f8074.png",
     "static/media/P6Home1.png": "/Personal-Portfolio/static/media/P6Home1.3a234e90da54fd25f992.png",
     "static/media/HomeImg.png": "/Personal-Portfolio/static/media/HomeImg.1f6aa21af769fe843618.png",
+    "static/media/P6Home-s.png": "/Personal-Portfolio/static/media/P6Home-s.9def695c10d99647e610.png",
     "static/media/githubLogo.png": "/Personal-Portfolio/static/media/githubLogo.be20d7dd3d0b289efb2c.png",
     "index.html": "/Personal-Portfolio/index.html",
-    "main.5b815765.css.map": "/Personal-Portfolio/static/css/main.5b815765.css.map",
-    "main.46647129.js.map": "/Personal-Portfolio/static/js/main.46647129.js.map",
+    "main.a81e4686.css.map": "/Personal-Portfolio/static/css/main.a81e4686.css.map",
+    "main.73589103.js.map": "/Personal-Portfolio/static/js/main.73589103.js.map",
     "453.ace21015.chunk.js.map": "/Personal-Portfolio/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b815765.css",
-    "static/js/main.46647129.js"
+    "static/css/main.a81e4686.css",
+    "static/js/main.73589103.js"
   ]
 }

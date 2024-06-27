@@ -19,6 +19,7 @@ const Skills = () => {
     "Express.js",
     "Git",
     "MongoDB",
+    "Vue.js",
   ];
 
   return (

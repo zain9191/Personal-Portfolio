@@ -31,6 +31,7 @@ const ProjectCard = ({
   description,
   imageUrl,
   link,
+  website,
   tools = [],
   images = [],
 }) => {
@@ -70,15 +71,17 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <a
-          className="project-a__link"
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={githubLogo} alt="GitHub Logo" className="gitLogo" />
-          Link to Github
-        </a>
+        <div className="project-a__links">
+          <a
+            className="project-a__link"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={githubLogo} alt="GitHub Logo" className="gitLogo" />
+            Link to GitHub
+          </a>
+        </div>
       </div>
 
       <Modal
@@ -92,7 +95,12 @@ const ProjectCard = ({
           <FontAwesomeIcon icon={faTimes} />
         </button>
         <div className="carousel-container">
-          <Carousel showThumbs={false} infiniteLoop useKeyboardArrows>
+          <Carousel
+            showThumbs={false}
+            infiniteLoop
+            useKeyboardArrows
+            thumbWidth="800"
+          >
             {images.map((image, index) => (
               <div key={index} className="carousel-image-container">
                 <img
