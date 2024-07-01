@@ -29,6 +29,7 @@ const modalStyles = {
 const ProjectCard = ({
   title,
   description,
+  subdescription,
   imageUrl,
   link,
   website,
@@ -57,6 +58,7 @@ const ProjectCard = ({
       />
       <div className="project-a__details">
         <h3 className="project-a__h3 project-title-hover">{title}</h3>
+        <h4 className="project-a__h4">{subdescription}</h4>
         <p className="project-a__description">{description}</p>
 
         <div className="project-a__tools">

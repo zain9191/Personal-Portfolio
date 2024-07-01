@@ -10,7 +10,7 @@
     height: 80%;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-2px);
     }
   }
 
@@ -21,6 +21,13 @@
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 10px;
+  }
+
+  &__h4 {
+    text-align: center;
+    font-size: $font-size-large;
+    font-family: "Montserrat", sans-serif;
+    color: $color-secondary;
   }
 
   &__description {
@@ -46,8 +53,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      transform: scale(1.05) translateY(-5px);
-      box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -55,7 +62,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 35%;
+    align-items: center;
+    width: 100%;
   }
 
   &__link {
@@ -66,18 +74,18 @@
     transition: transform 0.3s ease, color 0.3s ease;
     border-radius: 10px;
     justify-content: center;
-    padding-top: 10px;
+    padding: 10px;
+    width: fit-content;
 
     &:hover {
       transform: scale(1.1);
       color: $color-accent;
-      box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
     }
 
     .gitLogo {
       height: 30px;
       width: 45px;
-      margin-left: 10px;
     }
   }
 
@@ -190,16 +198,32 @@
   }
 }
 
+@media (max-width: 768px) and (min-width: 480px) {
+  .project-a__card {
+    flex-direction: row;
+  }
+
+  .project-a__card:first-child,
+  .project-a__card:last-child {
+    flex-direction: column;
+  }
+
+  .project-a__card:nth-child(2),
+  .project-a__card:nth-child(3) {
+    flex-direction: row;
+  }
+}
+
 @media (max-width: 768px) {
   .project-a__card {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
   }
 
   .project-a__img {
-    width: 100%;
     margin-right: 0;
-    margin-bottom: 20px;
+    height: 450px;
+    width: auto;
   }
 
   .project-a__details {
@@ -226,5 +250,12 @@
   .project-a__tools .tool .tool-logo {
     width: 20px;
     height: 20px;
+  }
+
+  .project-a__card {
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    height: auto;
   }
 }

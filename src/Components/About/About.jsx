@@ -30,7 +30,9 @@ import KanapHome3 from "../../assets/Porojects/kanap/KanapHome3.png";
 const projects = [
   {
     title: "Kasa",
-    description: "React application for finding a vacation home",
+    description:
+      "Kasa project is for a rental platform for properties, allowing users to browse and view detailed information about various rental options. Built with React, the application features a responsive design and smooth user interactions, including a carousel for property images, a detailed property description, and integrated tools for enhanced user experience.",
+    subdescription: "Real Estate Rental Platform",
     imageUrl: KasaHomeSmall,
     link: "https://github.com/zain9191/P7-Kasa",
     tools: ["JavaScript", "CSS", "HTML", "React", "Node"],
@@ -38,7 +40,10 @@ const projects = [
   },
   {
     title: "HotTakes",
-    description: "A gastronomic review application",
+    description:
+      "HotTakes is a secure API for a gastronomic review application. Developed with Angular and Express, it includes user authentication, secure data handling, and responsive front-end features",
+    subdescription: "Secure API for Gastronomic Reviews",
+
     imageUrl: P6HomeSmall,
     link: "https://github.com/zain9191/Web-Developer-P6",
     tools: ["TypeScript", "CSS", "HTML", "Angular", "Node"],
@@ -46,7 +51,10 @@ const projects = [
   },
   {
     title: "Kanap",
-    description: "A website that sells sofas",
+    description:
+      "Kanap is an e-commerce website for selling customizable sofas. The project emphasizes JavaScript for dynamic content and user interaction, along with a robust backend for managing product information",
+    subdescription: "E-commerce Website",
+
     imageUrl: KanapHomeSmall,
     link: "https://github.com/zain9191/P5-Dev-Web-Kanap",
     tools: ["JavaScript", "CSS", "HTML", "Node"],
@@ -54,7 +62,10 @@ const projects = [
   },
   {
     title: "La Panthère",
-    description: "The agency specializes in web design",
+    description:
+      "La Panthère is a project focused on improving the SEO of an existing website. The project includes optimizing content, improving page load speed, and ensuring a mobile-friendly design.",
+    subdescription: "SEO Optimization Project",
+
     imageUrl: PantherHomeSmall,
     link: "https://github.com/zain9191/La-Panthere",
     tools: ["CSS", "HTML"],
@@ -89,6 +100,7 @@ const About = () => {
                   <ProjectCard
                     title={project.title}
                     description={project.description}
+                    subdescription={project.subdescription}
                     imageUrl={project.imageUrl}
                     link={project.link}
                     tools={project.tools}
