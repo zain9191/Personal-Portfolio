@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Modal from "react-modal";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import githubLogo from "../../assets/Logos/githubLogo.png";
 import toolLogos from "../ToolLogos/toolLogos";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 const modalStyles = {
   content: {
@@ -37,6 +38,19 @@ const ProjectCard = ({
   images = [],
 }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const { language, translations } = useContext(LanguageContext);
+
+  useEffect(() => {
+    const html = document.documentElement;
+    if (modalIsOpen) {
+      html.classList.add("no-scroll");
+    } else {
+      html.classList.remove("no-scroll");
+    }
+    return () => {
+      html.classList.remove("no-scroll");
+    };
+  }, [modalIsOpen]);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -62,7 +76,7 @@ const ProjectCard = ({
         <p className="project-a__description">{description}</p>
 
         <div className="project-a__tools">
-          <span> built with:</span>
+          <span>{translations[language].projectCard.builtWith}</span>
           <div className="project-a__tools--logos">
             {tools.map((tool, index) => (
               <span key={index} className="tool">
@@ -81,7 +95,7 @@ const ProjectCard = ({
             rel="noopener noreferrer"
           >
             <img src={githubLogo} alt="GitHub Logo" className="gitLogo" />
-            Link to GitHub
+            {translations[language].projectCard.linkToGithub}
           </a>
         </div>
       </div>
@@ -92,6 +106,7 @@ const ProjectCard = ({
         style={modalStyles}
         contentLabel="Image Preview"
         shouldFocusAfterRender={true}
+        bodyOpenClassName="no-scroll"
       >
         <button onClick={closeModal} className="modal-close-button">
           <FontAwesomeIcon icon={faTimes} />

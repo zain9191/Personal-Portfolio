@@ -1,28 +1,31 @@
-import React from "react";
+// src/Components/Contcat/contact.jsx
+import React, { useContext } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 const Contact = () => {
+  const { language, translations } = useContext(LanguageContext);
   const [state, handleSubmit] = useForm("xkndyvnb");
 
   if (state.succeeded) {
-    return <p>Thanks for contacting me!</p>;
+    return <p>{translations[language].contact.thanks}</p>;
   }
 
   return (
     <section id="contact">
       <div className="container">
-        <h2>Contact Me</h2>
-        <p>
-          Feel free to reach out to me for any inquiries or just to say hello!
-        </p>
+        <h2>{translations[language].contact.contactMe}</h2>
+        <p>{translations[language].contact.feelFree}</p>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{translations[language].contact.name}</label>
             <input type="text" id="name" name="name" required />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email">
+              {translations[language].contact.email}
+            </label>
             <input type="email" id="email" name="email" required />
             <ValidationError
               prefix="Email"
@@ -31,7 +34,9 @@ const Contact = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">
+              {translations[language].contact.message}
+            </label>
             <textarea id="message" name="message" rows="5" required></textarea>
             <ValidationError
               prefix="Message"
@@ -40,10 +45,9 @@ const Contact = () => {
             />
           </div>
           <button type="submit" disabled={state.submitting}>
-            Send
+            {translations[language].contact.send}
           </button>
         </form>
-        {state.succeeded && <p>Thanks for contacting me!</p>}
       </div>
     </section>
   );

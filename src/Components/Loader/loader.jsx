@@ -5,7 +5,7 @@ const Loader = () => {
 
   useEffect(() => {
     // Prevent scrolling when the loader is visible
-    document.body.style.overflow = visible ? "hidden" : "auto";
+    // document.body.style.overflow = visible ? "hidden" : "auto";
 
     const timer = setTimeout(() => {
       setVisible(false);
@@ -13,7 +13,7 @@ const Loader = () => {
 
     return () => {
       clearTimeout(timer); // Clean up timer on component unmount
-      document.body.style.overflow = "auto"; // Re-enable scrolling
+      // document.body.style.overflow = "auto"; // Re-enable scrolling
     };
   }, [visible]);
 

@@ -1,3 +1,4 @@
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -11,31 +12,30 @@ import '../src/Style/CSS/main.css'
 import ScrollAnimation from './Components/ScrollAnimation/scrollAnimation';
 import Footer from './Components/Footer/footer';
 import { BrowserRouter as Router } from 'react-router-dom';
-
-
-
+import { LanguageProvider } from './Context/LanguageContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Loader/>
-    <Header />
-    <Router>
-
-    <ScrollAnimation>
-      <Home />
-    </ScrollAnimation>
-    {/* <ScrollAnimation> */}
-      <About />
-    {/* </ScrollAnimation> */}
-    {/* <ScrollAnimation> */}
-      <Skills />
-    {/* </ScrollAnimation> */}
-    {/* <ScrollAnimation> */}
-      <Contact />
-    {/* </ScrollAnimation> */}
-    <Footer/>
-    </Router>
+    <LanguageProvider>
+      <Loader/>
+      <Header />
+      <Router>
+       
+          <Home />
+        
+       
+          <About />
+        
+       
+          <Skills />
+        
+       
+          <Contact />
+        
+        <Footer/>
+      </Router>
+    </LanguageProvider>
   </React.StrictMode>
 );
 

@@ -141,3 +141,30 @@
 .hidden {
     display: none;
 }
+
+
+
+.language-toggle {
+    background-color: $color-primary;
+    color: $color-secondary;
+    font-size: $font-size-medium;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color $transition-speed, color $transition-speed;
+    
+    &:hover {
+      background-color: $color-hover;
+      color: $color-primary;
+    }
+  }
+
+
+  html {
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Signika Negative', sans-serif;
+    }

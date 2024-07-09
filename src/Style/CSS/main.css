@@ -1,17 +1,3 @@
-html, body {
-  margin: auto;
-  padding: 0;
-  width: 98%;
-  overflow-x: hidden;
-}
-
-html, body {
-  margin: auto;
-  padding: 0;
-  width: 98%;
-  overflow-x: hidden;
-}
-
 .header {
   background-color: #f2f2f2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -139,11 +125,27 @@ html, body {
   display: none;
 }
 
-html, body {
+.language-toggle {
+  background-color: #f2f2f2;
+  color: #555555;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.language-toggle:hover {
+  background-color: #88b4e7;
+  color: #f2f2f2;
+}
+
+html {
   margin: auto;
   padding: 0;
-  width: 98%;
+  width: 100%;
   overflow-x: hidden;
+  font-family: "Signika Negative", sans-serif;
 }
 
 .Home {
@@ -211,13 +213,6 @@ html, body {
     font-size: 3vw; /* Fixed font size for larger screens */
     letter-spacing: 2px;
   }
-}
-
-html, body {
-  margin: auto;
-  padding: 0;
-  width: 98%;
-  overflow-x: hidden;
 }
 
 .about-content {
@@ -408,7 +403,6 @@ img:hover {
   border-radius: 20px;
   width: 50%;
   margin-right: 20px;
-  box-shadow: 0 10px 10px rgba(102, 153, 204, 0.1), 0 -3px 6px rgba(102, 153, 204, 0.05), 0 1px 2px rgba(102, 153, 204, 0.05), 0 3px 3px rgba(102, 153, 204, 0.1), 0 -1px 1px rgba(102, 153, 204, 0.025);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -593,6 +587,10 @@ img:hover {
     height: auto;
   }
 }
+.no-scroll {
+  overflow: hidden;
+}
+
 .fade-in {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -600,13 +598,6 @@ img:hover {
 
 .fade-in.visible {
   opacity: 1;
-}
-
-html, body {
-  margin: auto;
-  padding: 0;
-  width: 98%;
-  overflow-x: hidden;
 }
 
 .subTitleContainer {
@@ -739,13 +730,6 @@ html, body {
     font-size: 3.5vw;
   }
 }
-html, body {
-  margin: auto;
-  padding: 0;
-  width: 98%;
-  overflow-x: hidden;
-}
-
 .skills {
   margin: 20px 0;
   display: flex;
@@ -792,13 +776,6 @@ html, body {
   top: 50%;
   left: 50%;
   transform-style: preserve-3d;
-}
-
-html, body {
-  margin: auto;
-  padding: 0;
-  width: 98%;
-  overflow-x: hidden;
 }
 
 #contact {

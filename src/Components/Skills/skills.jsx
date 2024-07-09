@@ -1,8 +1,11 @@
-import React from "react";
+// src/Components/Skills/skills.jsx
+import React, { useContext } from "react";
 import LanguageAnimator from "../LanguageAnimator/languageAnimator";
 import SubTitle from "../subTitle/subTitle";
+import { LanguageContext } from "../../Context/LanguageContext";
 
 const Skills = () => {
+  const { language, translations } = useContext(LanguageContext);
   const programmingLanguages = [
     "JavaScript",
     "Python",
@@ -25,7 +28,7 @@ const Skills = () => {
   return (
     <div className="skills" id="IDskills">
       <div className="skills__div__1">
-        <SubTitle text=" THE THINGS THAT I USE:" />
+        <SubTitle text={translations[language].skills.thingsIUse} />
       </div>
       <div className="skills__div__2">
         <LanguageAnimator languages={programmingLanguages} />
