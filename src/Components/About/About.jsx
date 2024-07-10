@@ -1,5 +1,4 @@
-// src/Components/About/About.jsx
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { LanguageContext } from "../../Context/LanguageContext";
 
@@ -29,7 +28,7 @@ import KanapHome1 from "../../assets/Porojects/kanap/KanapHome1.png";
 import KanapHome2 from "../../assets/Porojects/kanap/KanapHome2.png";
 import KanapHome3 from "../../assets/Porojects/kanap/KanapHome3.png";
 
-// import HomeImg from "../../assets/HomeImg.png";
+import HomeImg from "../../assets/HomeImg.png";
 
 const projects = [
   {
@@ -97,31 +96,62 @@ const projects = [
 
 const About = () => {
   const { language, translations } = useContext(LanguageContext);
+  const introRef = useRef(null);
+  const imgRef = useRef(null);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            imgRef.current.classList.add("animated");
+            textRef.current.classList.add("about-text__animated");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (introRef.current) {
+      observer.observe(introRef.current);
+    }
+
+    return () => {
+      if (introRef.current) {
+        observer.unobserve(introRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section id="IDabout">
       <div className="container">
         <div className="about-content">
           <div className="about-content__div__1">
-            <p>{translations[language].about.whoAmI}</p>
-            <p className="about-text__1p">
-              {/* <p>test</p> */}
-              {/* <div className="Home__div2">
-                <img src={HomeImg} className="Home__img" alt="Portfolio" />
-              </div> */}
+            <h2 className="underLine">{translations[language].about.whoAmI}</h2>
 
-              {translations[language].about.developerDescription}
-            </p>
-            <br></br>
-            <p>{translations[language].about.buildWebsites}</p>
-            <br />
+            <div className="about__intro" ref={introRef}>
+              <img
+                src={HomeImg}
+                className="about__img"
+                alt="Portfolio"
+                ref={imgRef}
+              />
+              <div ref={textRef} className="about-text">
+                <p className="about-text__1p">
+                  {translations[language].about.developerDescription}
+                </p>
+                <p>{translations[language].about.buildWebsites}</p>
+              </div>
+            </div>
           </div>
 
           <div className="about-content__div__2">
-            <p className="about-content__div__2__p">
+            <p className="about-content__div__2__p underLine">
               {translations[language].about.whatHaveIDone}
             </p>
-
             <div className="about__grid">
               {projects.map((project, index) => (
                 <div className="projects" key={index}>

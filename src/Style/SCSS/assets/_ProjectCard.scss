@@ -12,6 +12,7 @@
     &:hover {
       transform: translateY(-2px);
     }
+    
   }
 
   &__h3 {
@@ -21,6 +22,9 @@
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+margin: 0;
+    }
   }
 
   &__h4 {
@@ -28,6 +32,7 @@
     font-size: $font-size-large;
     font-family: "Montserrat", sans-serif;
     color: $color-secondary;
+    margin-bottom: 10px;
   }
 
   &__description {
@@ -222,8 +227,10 @@
 
   .project-a__img {
     margin-right: 0;
-    height: 450px;
+    // height: 450px;
     width: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .project-a__details {
@@ -251,12 +258,18 @@
     width: 20px;
     height: 20px;
   }
+  .project-a__tools{
+    margin: 0;
+    // border: dotted red 3px;
+  }
 
   .project-a__card {
     flex-direction: column;
     // justify-content: center;
     // align-items: center;
     height: auto;
+    margin: 0;
+    padding: 0;
   }
 }
 

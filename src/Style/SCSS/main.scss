@@ -11,3 +11,11 @@
 @import 'assets/carouselStyle';
 @import 'assets/loader';
 @import 'assets/footer';
+
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}

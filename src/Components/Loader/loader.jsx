@@ -4,20 +4,19 @@ const Loader = () => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Prevent scrolling when the loader is visible
-    // document.body.style.overflow = visible ? "hidden" : "auto";
+    document.documentElement.style.overflow = visible ? "hidden" : "auto";
 
     const timer = setTimeout(() => {
       setVisible(false);
-    }, 5000); // Display for 5 seconds
+    }, 5000); //   5 seconds
 
     return () => {
-      clearTimeout(timer); // Clean up timer on component unmount
-      // document.body.style.overflow = "auto"; // Re-enable scrolling
+      clearTimeout(timer);
+      document.documentElement.style.overflow = "auto";
     };
   }, [visible]);
 
-  if (!visible) return null; // Hide component after timeout
+  if (!visible) return null;
 
   return (
     <div className="loader-body">

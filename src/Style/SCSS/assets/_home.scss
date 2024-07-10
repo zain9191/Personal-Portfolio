@@ -2,37 +2,25 @@
 
 .Home {
     background-color: $color-primary;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    // padding-top: 5%; /* Adjusted padding using percentage */
+    // padding-bottom: 1%; /* Adjusted padding using percentage */
     color: $color-secondary;
     border-left: 5px solid $color-accent;
-    margin: 20px 0;
+    margin: 2% 0; /* Adjusted margin using percentage */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    min-height: 90vh;
+    justify-content: center;
 
-    &__div1{
-        padding-left: 50px;
+    &__div1 {
+        // margin: 8%; /* Adjusted padding using percentage */
     }
-    &__div2{
+
+    &__div2 {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    
-    &__img {
-        background-color: #6699cc;
-        mix-blend-mode: multiply;
-        width: 90%;
-
-        height: auto;
-        // padding-left: auto;
-        border-radius: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-
-        // top: 50%;
-        left: 50%;
-
     }
 
     &__container {
@@ -40,21 +28,26 @@
         flex-direction: column; /* Default to column for small screens */
         justify-content: space-between;
         align-items: center;
-        
+        margin-left: 5%; /* Adjusted margin-left to position slightly to the left */
+
         @media (min-width: 768px) {
             flex-direction: row; /* Change to row for larger screens */
+            justify-content: space-around; /* Adjusted to space-around for larger screens */
+            align-items: flex-start; /* Adjusted alignment for larger screens */
+            margin-left: 0; /* Reset margin-left for larger screens */
         }
     }
 
     &__h1 {
-        font-size: 15vw; 
+        font-size: 15vw; /* Responsive font size using vw */
         font-weight: 900;
         font-family: 'Signika Negative', sans-serif;
-        margin-bottom: 2vw;
-        margin-top: 9vw;
-        
+        margin-bottom: 2vw; /* Responsive margin using vw */
+        margin-top: 9vw; /* Responsive margin using vw */
+
         @media (min-width: 768px) {
-            font-size: 15vw; /*  larger screens */
+            font-size: 10vw; /* Adjusted font size for larger screens */
+            margin-top: 5vw; /* Adjusted margin for larger screens */
         }
 
         &__dot {
@@ -70,10 +63,6 @@
 
         @media (min-width: 768px) {
             font-size: 3vw; /* Fixed font size for larger screens */
-            letter-spacing: 2px;
-
         }
     }
 }
-
-

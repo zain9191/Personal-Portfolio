@@ -150,53 +150,46 @@ html {
 
 .Home {
   background-color: #f2f2f2;
-  padding-top: 50px;
-  padding-bottom: 10px;
   color: #555555;
   border-left: 5px solid #6699cc;
-  margin: 20px 0;
+  margin: 2% 0; /* Adjusted margin using percentage */
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-}
-.Home__div1 {
-  padding-left: 50px;
+  min-height: 90vh;
+  justify-content: center;
 }
 .Home__div2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Home__img {
-  background-color: #6699cc;
-  mix-blend-mode: multiply;
-  width: 90%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgb(0, 0, 0);
-  left: 50%;
-}
 .Home__container {
   display: flex;
   flex-direction: column; /* Default to column for small screens */
   justify-content: space-between;
   align-items: center;
+  margin-left: 5%; /* Adjusted margin-left to position slightly to the left */
 }
 @media (min-width: 768px) {
   .Home__container {
     flex-direction: row; /* Change to row for larger screens */
+    justify-content: space-around; /* Adjusted to space-around for larger screens */
+    align-items: flex-start; /* Adjusted alignment for larger screens */
+    margin-left: 0; /* Reset margin-left for larger screens */
   }
 }
 .Home__h1 {
-  font-size: 15vw;
+  font-size: 15vw; /* Responsive font size using vw */
   font-weight: 900;
   font-family: "Signika Negative", sans-serif;
-  margin-bottom: 2vw;
-  margin-top: 9vw;
+  margin-bottom: 2vw; /* Responsive margin using vw */
+  margin-top: 9vw; /* Responsive margin using vw */
 }
 @media (min-width: 768px) {
   .Home__h1 {
-    font-size: 15vw; /*  larger screens */
+    font-size: 10vw; /* Adjusted font size for larger screens */
+    margin-top: 5vw; /* Adjusted margin for larger screens */
   }
 }
 .Home__h1__dot {
@@ -211,7 +204,6 @@ html {
 @media (min-width: 768px) {
   .Home__h2 {
     font-size: 3vw; /* Fixed font size for larger screens */
-    letter-spacing: 2px;
   }
 }
 
@@ -223,48 +215,39 @@ html {
 
 .about-content__div__1 {
   background-color: #f2f2f2;
-  height: 60vh;
   width: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 50px;
   border-left: 5px solid #6699cc;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
   color: #555555;
-}
-.about-content__div__1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  min-height: 90vh;
 }
 .about-content__div__1:hover::before {
   transform: translateX(0);
 }
 .about-content__div__1 p {
-  margin: 0;
-  padding: 0;
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.2px;
+  padding-left: 50px;
 }
 @media (max-width: 768px) {
   .about-content__div__1 p {
     font-size: 4vw;
+    padding-left: 20px;
   }
 }
 @media (max-width: 480px) {
   .about-content__div__1 p {
-    font-size: 3vw;
+    font-size: 3.5vw;
+    padding-left: 20px;
+    font-weight: 200;
   }
 }
 
@@ -297,23 +280,21 @@ html {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin: 0;
   margin: 10px;
-  padding: 0;
-  border-radius: 10px;
-  text-align: center;
   padding: 50px;
   animation: fadeIn 1.5s ease-in-out;
   color: #555555;
+  text-align: center;
 }
 @media (max-width: 480px) {
   .about-content__div__2__p {
     font-size: 1rem;
+    margin: 0;
+    padding: 0;
   }
 }
 @media (max-width: 768px) {
   .about-content__div__2 {
-    width: 100%;
     margin-top: 20px;
     padding: 20px;
   }
@@ -329,7 +310,7 @@ html {
 @media (max-width: 768px) {
   .about__grid {
     flex-direction: column;
-    width: 95%;
+    flex-wrap: nowrap;
   }
 }
 
@@ -363,6 +344,82 @@ img:hover {
   transform: scale(1.05);
 }
 
+.about__img {
+  background-color: #6699cc;
+  mix-blend-mode: multiply;
+  width: 30%;
+  margin-left: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  margin: 0 20px 20px 20px; /* Adjust margins as needed */
+}
+@media (max-width: 768px) {
+  .about__img {
+    width: 80%; /* Adjusted width for phone screens */
+    margin: auto;
+  }
+}
+
+.about__intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .about__intro {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.about__img.animated {
+  animation: slideInFromLeft 1s ease forwards;
+}
+
+.about-text__animated {
+  animation: slideInFromRight 1s ease forwards;
+}
+
+.about__img {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.about-text {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.underLine {
+  border-bottom: 5px solid #6699cc;
+  margin: auto;
+  width: fit-content;
+  padding-bottom: 5px;
+}
+
 .project-a__card {
   display: flex;
   flex-direction: row;
@@ -384,11 +441,17 @@ img:hover {
   font-weight: 700;
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .project-a__h3 {
+    margin: 0;
+  }
+}
 .project-a__h4 {
   text-align: center;
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   color: #555555;
+  margin-bottom: 10px;
 }
 .project-a__description {
   text-align: center;
@@ -558,8 +621,9 @@ img:hover {
   }
   .project-a__img {
     margin-right: 0;
-    height: 450px;
     width: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
   .project-a__details {
     width: 100%;
@@ -582,9 +646,14 @@ img:hover {
     width: 20px;
     height: 20px;
   }
+  .project-a__tools {
+    margin: 0;
+  }
   .project-a__card {
     flex-direction: column;
     height: auto;
+    margin: 0;
+    padding: 0;
   }
 }
 .no-scroll {
@@ -947,6 +1016,13 @@ img:hover {
 
 .contact, .social-links {
   margin-bottom: 10px;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,3 @@
-// src/i18n/translations.js
 const translations = {
   en: {
     header: {
@@ -10,8 +9,9 @@ const translations = {
     about: {
       whoAmI: "Who Am I?",
       developerDescription:
-        "A dedicated frontend developer. Specialized in creating modern, responsive web applications using React.js.",
-      buildWebsites: "I build websites, let me know if you need one",
+        "I am a dedicated frontend developer specializing in crafting modern, responsive web applications using React.js. With a passion for clean code and user-centric design, I bring creativity and technical expertise to every project.",
+      buildWebsites:
+        "Whether you're launching a new site, enhancing an existing one, or looking to optimize performance, I'm here to help. Let's collaborate!",
       whatHaveIDone: "Previous Projects that I have Done",
     },
     contact: {
@@ -51,10 +51,10 @@ const translations = {
     about: {
       whoAmI: "Qui suis-je?",
       developerDescription:
-        "Un développeur frontend dévoué. Spécialisé dans la création d'applications web modernes et réactives utilisant React.js.",
+        "Je suis un développeur frontend dévoué spécialisé dans la création d'applications web modernes et réactives utilisant React.js. Passionné par le code propre et le design centré utilisateur, je mets en œuvre créativité et expertise technique dans chaque projet.",
       buildWebsites:
-        "J'ai construit des sites web, faites-le moi savoir si vous en avez besoin",
-      whatHaveIDone: "Projets précédents que j'ai réalisés?",
+        "Que vous souhaitiez lancer un nouveau site, améliorer un existant ou optimiser ses performances, je suis là pour vous aider. Collaborons ensemble!",
+      whatHaveIDone: "Projets précédents que j'ai réalisés",
     },
     contact: {
       contactMe: "Contactez-moi",

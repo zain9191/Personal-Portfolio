@@ -40,6 +40,25 @@ const ProjectCard = ({
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const { language, translations } = useContext(LanguageContext);
 
+  const [isReversed, setIsReversed] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setIsReversed(true);
+      } else {
+        setIsReversed(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     const html = document.documentElement;
     if (modalIsOpen) {
@@ -63,14 +82,16 @@ const ProjectCard = ({
   };
 
   return (
-    <div className="project-a__card">
+    <div className={`project-a__card ${isReversed ? "reverse-order" : ""}`}>
       <img
         src={imageUrl}
         alt={title}
-        className="project-a__img"
+        className={`project-a__img ${isReversed ? "reverse-order" : ""}`}
         onClick={openModal}
       />
-      <div className="project-a__details">
+      <div
+        className={`project-a__details ${isReversed ? "reverse-order" : ""}`}
+      >
         <h3 className="project-a__h3 project-title-hover">{title}</h3>
         <h4 className="project-a__h4">{subdescription}</h4>
         <p className="project-a__description">{description}</p>

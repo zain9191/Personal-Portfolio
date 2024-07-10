@@ -1,6 +1,6 @@
 // src/Components/Home/home.jsx
 import React, { useContext } from "react";
-import HomeImg from "../../assets/HomeImg.png";
+// import HomeImg from "../../assets/HomeImg.png";
 import { LanguageContext } from "../../Context/LanguageContext";
 
 function Home() {
@@ -21,9 +21,9 @@ function Home() {
             <p>{translations[language].home.lookAtPortfolio}</p>
           </h2>
         </div>
-        <div className="Home__div2">
+        {/* <div className="Home__div2">
           <img src={HomeImg} className="Home__img" alt="Portfolio" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
